@@ -45,14 +45,20 @@ export const html = `
         <div style="position:absolute;inset:0;overflow:hidden;border-radius:0;">
           <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=900&q=80" alt="Finca palta" style="width:100%;height:100%;object-fit:cover;opacity:.25;">
         </div>
-        <div style="position:relative;z-index:1;">
-          <div class="pub-badge-farmex">✓ Farmex Verified Producer</div>
-          <div class="pub-farm-name">Raúl García Mendoza</div>
-          <div class="pub-farm-sub">Productor de Palta Hass certificado · Costa del Perú</div>
-          <div class="pub-farm-meta">
-            <div class="pub-meta-item">📍 Virú, La Libertad</div>
-            <div class="pub-meta-item">🌿 32 hectáreas propias</div>
-            <div class="pub-meta-item">📦 Exportador directo · 5 campañas</div>
+        <div style="position:relative;z-index:1;display:flex;align-items:flex-start;gap:16px;">
+          <!-- Foto del agricultor -->
+          <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=120&q=80"
+               alt="Raúl García"
+               style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid var(--gold);flex-shrink:0;margin-top:4px;">
+          <div>
+            <div class="pub-badge-farmex">✓ Farmex Verified Producer</div>
+            <div class="pub-farm-name">Raúl García Mendoza</div>
+            <div class="pub-farm-sub">Productor de Palta Hass certificado · Costa del Perú</div>
+            <div class="pub-farm-meta">
+              <div class="pub-meta-item">📍 Virú, La Libertad</div>
+              <div class="pub-meta-item">🌿 32 hectáreas propias</div>
+              <div class="pub-meta-item">📦 Exportador directo · 5 campañas</div>
+            </div>
           </div>
         </div>
         <div class="pub-score-float">
@@ -73,6 +79,7 @@ export const html = `
         <div style="font-size:13px;font-weight:700;color:var(--txt);margin-bottom:10px;">🌱 Mis hectáreas activas</div>
         <div class="pub-crops-grid">
           <div class="pub-crop">
+            <img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400&q=80" alt="Palta Hass" style="width:100%;height:110px;object-fit:cover;border-radius:6px;margin-bottom:10px;">
             <div class="pub-crop-name">🥑 Palta Hass</div>
             <div class="pub-crop-ha">28 ha · Campaña 2026 en curso</div>
             <div class="pub-crop-stats">
@@ -83,6 +90,7 @@ export const html = `
             </div>
           </div>
           <div class="pub-crop" style="border-left-color:var(--info);">
+            <img src="https://images.unsplash.com/photo-1425007680966-1ac71ad1b87d?w=400&q=80" alt="Arándano" style="width:100%;height:110px;object-fit:cover;border-radius:6px;margin-bottom:10px;">
             <div class="pub-crop-name">🫐 Arándano</div>
             <div class="pub-crop-ha">4 ha · Nueva plantación 2026</div>
             <div class="pub-crop-stats">
