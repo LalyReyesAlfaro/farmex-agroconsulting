@@ -9,48 +9,41 @@ import * as scoring    from './screens/scoring.js';
 import * as clima      from './screens/clima.js';
 import * as vitrina    from './screens/vitrina.js';
 
-// ── SUPABASE (inline — evita problemas de path en GitHub Pages) ──────────────
-const SB_URL  = 'https://zvleepucmfpkedyxyeol.supabase.co';
-const SB_KEY  = 'sb_publishable_Tl_gqh-uYy-VBhwM7aIHRw_aKz-Cczj';
-
-function sbHeaders(extra = {}) {
-  return { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}`, 'Content-Type': 'application/json', ...extra };
-}
-function saveSession(d) {
-  localStorage.setItem('fx_session', JSON.stringify({ access_token: d.access_token, user: d.user, expires_at: Date.now() + (d.expires_in || 3600) * 1000 }));
-}
-function getSession() {
-  try { const s = JSON.parse(localStorage.getItem('fx_session') || 'null'); return s && s.expires_at > Date.now() ? s : null; }
-  catch { return null; }
-}
+// ── SUPABASE SDK ─────────────────────────────────────────────────────────────
+const SB_URL = 'https://zvleepucmfpkedyxyeol.supabase.co';
+const SB_KEY = 'sb_publishable_Tl_gqh-uYy-VBhwM7aIHRw_aKz-Cczj';
+const _sb    = window.supabase.createClient(SB_URL, SB_KEY);
 
 window.fbAuth = {
   async register(email, password, meta = {}) {
-    const r = await fetch(`${SB_URL}/auth/v1/signup`, { method: 'POST', headers: sbHeaders(), body: JSON.stringify({ email, password, data: meta }) });
-    const d = await r.json(); if (d.user) saveSession(d); return d;
+    const { data, error } = await _sb.auth.signUp({ email, password, options: { data: meta } });
+    if (error) return { error: error.message };
+    return { user: data.user, access_token: data.session?.access_token };
   },
   async login(email, password) {
-    const r = await fetch(`${SB_URL}/auth/v1/token?grant_type=password`, { method: 'POST', headers: sbHeaders(), body: JSON.stringify({ email, password }) });
-    const d = await r.json(); if (d.access_token) saveSession(d); return d;
+    const { data, error } = await _sb.auth.signInWithPassword({ email, password });
+    if (error) return { error: error.message };
+    return { user: data.user, access_token: data.session?.access_token };
   },
-  logout() { localStorage.removeItem('fx_session'); window.location.reload(); },
-  getUser()    { const s = getSession(); return s ? s.user : null; },
-  getToken()   { const s = getSession(); return s ? s.access_token : null; },
-  isLoggedIn() { return !!this.getToken(); },
+  logout()     { _sb.auth.signOut(); window.location.reload(); },
+  getUser()    { return _sb.auth.getUser ? null : null; },
+  isLoggedIn() { return !!localStorage.getItem('sb-zvleepucmfpkedyxyeol-auth-token'); },
 };
 
 window.fbDb = {
-  async query(table, { select = '*', filters = [], order, limit } = {}) {
-    let url = `${SB_URL}/rest/v1/${table}?select=${select}`;
-    filters.forEach(f => { url += `&${f}`; });
-    if (order) url += `&order=${order}`;
-    if (limit) url += `&limit=${limit}`;
-    const r = await fetch(url, { headers: sbHeaders() });
-    return r.status === 204 ? null : r.json();
+  async query(table, { select = '*', filters = [] } = {}) {
+    let q = _sb.from(table).select(select);
+    filters.forEach(f => {
+      if (f.includes('=eq.')) q = q.eq(f.split('=eq.')[0], f.split('=eq.')[1]);
+    });
+    const { data, error } = await q;
+    if (error) throw error;
+    return data;
   },
-  async insert(table, data) {
-    const r = await fetch(`${SB_URL}/rest/v1/${table}`, { method: 'POST', headers: sbHeaders({ 'Prefer': 'return=representation' }), body: JSON.stringify(data) });
-    return r.json();
+  async insert(table, row) {
+    const { data, error } = await _sb.from(table).insert(row).select();
+    if (error) throw error;
+    return data;
   },
 };
 // ── FIN SUPABASE ─────────────────────────────────────────────────────────────
