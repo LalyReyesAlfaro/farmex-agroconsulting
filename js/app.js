@@ -77,24 +77,17 @@ function setSidebarVisibility(visible) {
 /* Boot — check auth, show login or dashboard */
 mountScreens();
 
-import('./lib/supabase.js').then(({ auth }) => {
+import('./lib/supabase.js').then(({ auth, db }) => {
+  window.fbAuth = auth;
+  window.fbDb   = db;
   if (auth.isLoggedIn()) {
     setSidebarVisibility(true);
     goScreen('dashboard');
   } else {
     setSidebarVisibility(false);
     goScreen('login');
-    // After login, restore sidebar
-    const observer = new MutationObserver(() => {
-      if (auth.isLoggedIn()) {
-        setSidebarVisibility(true);
-        observer.disconnect();
-      }
-    });
-    observer.observe(document.body, { subtree: true, childList: true });
   }
 }).catch(() => {
-  // Supabase not configured yet — show dashboard directly (demo mode)
   setSidebarVisibility(true);
   goScreen('dashboard');
 });

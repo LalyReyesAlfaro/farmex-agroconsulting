@@ -1,5 +1,4 @@
-import { auth, db } from '../lib/supabase.js';
-
+// auth y db se inyectan como window.fbAuth / window.fbDb desde app.js
 export const html = `
 <div class="login-wrap">
   <div class="login-card">
@@ -94,10 +93,10 @@ export function init() {
     if (!email || !pass) { showErr(err, 'Completa todos los campos.'); return; }
     btn.textContent = 'Ingresando...'; btn.disabled = true;
 
-    const data = await auth.login(email, pass);
+    const data = await window.fbAuth.login(email, pass);
     if (data.access_token) {
       // Load producer profile
-      const rows = await db.query('productores', { filters: [`user_id=eq.${data.user.id}`] }).catch(() => []);
+      const rows = await window.fbDb.query('productores', { filters: [`user_id=eq.${data.user.id}`] }).catch(() => []);
       if (rows?.length) window._productor = rows[0];
       window.goScreen('dashboard');
     } else {
@@ -124,11 +123,10 @@ export function init() {
 
     btn.textContent = 'Creando cuenta...'; btn.disabled = true;
 
-    const data = await auth.register(email, pass, { nombre, region });
+    const data = await window.fbAuth.register(email, pass, { nombre, region });
     if (data.user) {
-      // Save producer profile
       const productor = { user_id: data.user.id, nombre, region, total_ha: ha, cultivo, whatsapp: wsp, email };
-      await db.insert('productores', productor).catch(() => {});
+      await window.fbDb.insert('productores', productor).catch(() => {});
       window._productor = productor;
       window.goScreen('dashboard');
     } else {
