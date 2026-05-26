@@ -252,7 +252,7 @@ export const html = `
           <input type="checkbox" id="r-privacy">
           <span>He leído y acepto la <a href="docs/politica-privacidad.pdf" target="_blank" rel="noopener">Política de Privacidad</a> y autorizo el tratamiento de mis datos personales.</span>
         </label>
-        <button class="lp-auth-btn" id="r-btn" onclick="doRegister()">Crear mi cuenta →</button>
+        <button class="lp-auth-btn" id="r-btn" onclick="doRegister()" disabled>Crear mi cuenta →</button>
       </div>
     </div>
   </div>
@@ -281,6 +281,23 @@ export function init() {
   window.toggleMobileMenu = () => {
     document.querySelector('.lp-nb-links')?.classList.toggle('open');
   };
+
+  const checkRegisterReady = () => {
+    const nombre  = document.getElementById('r-nombre')?.value.trim();
+    const region  = document.getElementById('r-region')?.value;
+    const ha      = document.getElementById('r-ha')?.value;
+    const cultivo = document.getElementById('r-cultivo')?.value;
+    const email   = document.getElementById('r-email')?.value.trim();
+    const pass    = document.getElementById('r-pass')?.value;
+    const privacy = document.getElementById('r-privacy')?.checked;
+    const btn     = document.getElementById('r-btn');
+    if (btn) btn.disabled = !(nombre && region && ha && cultivo && email && pass && privacy);
+  };
+
+  ['r-nombre','r-region','r-ha','r-cultivo','r-email','r-pass','r-privacy'].forEach(id => {
+    document.getElementById(id)?.addEventListener('input',  checkRegisterReady);
+    document.getElementById(id)?.addEventListener('change', checkRegisterReady);
+  });
 
   window.enviarContacto = () => {
     const n = document.getElementById('c-nombre').value.trim();
