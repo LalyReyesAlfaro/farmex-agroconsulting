@@ -1,23 +1,4 @@
 export const html = `
-<!-- Cabecera Quiénes Somos -->
-<div class="srv-hero">
-  <div class="srv-hero-inner">
-    <div class="srv-hero-tag">🌿 AgriFintech · Perú 2026</div>
-    <h1 class="srv-hero-title">Quiénes somos</h1>
-    <p class="srv-hero-desc">Farmex Capital es la primera plataforma AgriFintech especializada en pequeños y medianos agroexportadores de palta y arándano en la costa del Perú. Combinamos financiamiento inteligente, data agrícola, scoring alternativo, asistencia técnica, marketplace y conexión comercial para que el productor pueda operar, crecer y exportar con estabilidad financiera.</p>
-    <div class="srv-mission-box">
-      <div class="srv-mission-lbl">🎯 Nuestra misión</div>
-      <div class="srv-mission-txt">"Convertir ciclos agrícolas en flujo de caja predecible, siendo el habilitador financiero del pequeño y mediano agroexportador peruano."</div>
-    </div>
-    <div class="srv-stats">
-      <div class="srv-stat"><div class="srv-stat-v">35,000</div><div class="srv-stat-l">Hectáreas TAM</div></div>
-      <div class="srv-stat"><div class="srv-stat-v">$357M</div><div class="srv-stat-l">Mercado anual</div></div>
-      <div class="srv-stat"><div class="srv-stat-v">5</div><div class="srv-stat-l">Regiones costeras</div></div>
-      <div class="srv-stat"><div class="srv-stat-v">6</div><div class="srv-stat-l">Productos por ciclo</div></div>
-    </div>
-  </div>
-</div>
-
 <!-- Servicio 1: Financiamiento -->
 <div class="srv-block">
   <div class="srv-block-header">
