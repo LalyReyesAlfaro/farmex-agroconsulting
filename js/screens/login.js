@@ -53,15 +53,6 @@ export const html = `
     </div>
   </section>
 
-  <!-- STATS -->
-  <div class="lp-stats-bar">
-    <div class="lp-stat"><div class="lp-stat-v">35,000</div><div class="lp-stat-l">Hectáreas TAM</div></div>
-    <div class="lp-stat"><div class="lp-stat-v">$357M</div><div class="lp-stat-l">Mercado anual</div></div>
-    <div class="lp-stat"><div class="lp-stat-v">5</div><div class="lp-stat-l">Regiones costeras</div></div>
-    <div class="lp-stat"><div class="lp-stat-v">6</div><div class="lp-stat-l">Productos por ciclo</div></div>
-    <div class="lp-stat"><div class="lp-stat-v">20–30%</div><div class="lp-stat-l">Pérdidas evitables</div></div>
-  </div>
-
   <!-- QUIÉNES SOMOS -->
   <section id="lp-quienes" class="lp-section lp-section-light">
     <div class="lp-section-header tc">
@@ -91,6 +82,15 @@ export const html = `
     </div>
   </section>
 
+  <!-- STATS -->
+  <div class="lp-stats-bar">
+    <div class="lp-stat"><div class="lp-stat-v">35,000</div><div class="lp-stat-l">Hectáreas TAM</div></div>
+    <div class="lp-stat"><div class="lp-stat-v">$357M</div><div class="lp-stat-l">Mercado anual</div></div>
+    <div class="lp-stat"><div class="lp-stat-v">5</div><div class="lp-stat-l">Regiones costeras</div></div>
+    <div class="lp-stat"><div class="lp-stat-v">8</div><div class="lp-stat-l">Productos por ciclo</div></div>
+    <div class="lp-stat"><div class="lp-stat-v">20–30%</div><div class="lp-stat-l">Pérdidas evitables</div></div>
+  </div>
+
   <!-- SERVICIOS -->
   <section id="lp-servicios" class="lp-section lp-section-light">
     <div class="lp-section-header tc">
@@ -102,32 +102,27 @@ export const html = `
       <div class="lp-srv-card">
         <div class="lp-srv-ico">💰</div>
         <div class="lp-srv-name">Financiamiento Agrícola</div>
-        <div class="lp-srv-desc">Crédito diseñado para cada etapa de tu campaña: fertilización, riego, postcosecha y exportación. Hasta S/ 25,000/ha con plazos alineados a tu cosecha.</div>
-        <div class="lp-srv-qui"><strong>Quiénes somos:</strong> Equipo de analistas especializados en agronegocios. <strong>Misión:</strong> Proveer crédito flexible alineado con los ciclos productivos del agricultor.</div>
+        <div class="lp-srv-desc">8 productos de crédito diseñados para cada etapa de tu campaña: fertilización, riego, postcosecha, fitosanitario y exportación. Hasta S/ 25,000/ha con plazos alineados a tu cosecha.</div>
       </div>
       <div class="lp-srv-card">
         <div class="lp-srv-ico">📡</div>
         <div class="lp-srv-name">Data Agrícola & Clima</div>
-        <div class="lp-srv-desc">Información satelital y climática en tiempo real para las 5 regiones clave. Alertas específicas para palta y arándano cada semana.</div>
-        <div class="lp-srv-qui"><strong>Quiénes somos:</strong> Plataforma de inteligencia agro-climática integrada con SENAMHI y MIDAGRI. <strong>Misión:</strong> Dar información al productor para decidir antes de que el problema ocurra.</div>
+        <div class="lp-srv-desc">Información satelital y climática en tiempo real integrada con SENAMHI y MIDAGRI para las 5 regiones clave. Alertas específicas para palta y arándano cada semana.</div>
       </div>
       <div class="lp-srv-card">
         <div class="lp-srv-ico">⭐</div>
         <div class="lp-srv-name">Scoring Alternativo IA</div>
-        <div class="lp-srv-desc">Te evaluamos por tu tierra, tus campañas y tu historial productivo, no por Infocorp. Accede a financiamiento aunque el banco te diga no.</div>
-        <div class="lp-srv-qui"><strong>Quiénes somos:</strong> Motor de IA desarrollado por ingenieros de datos y especialistas agropecuarios. <strong>Misión:</strong> Evaluar al productor por lo que realmente es.</div>
+        <div class="lp-srv-desc">Te evaluamos por tu tierra, tus campañas y tu historial productivo, no por Infocorp. Accede a financiamiento aunque el banco te haya dicho no.</div>
       </div>
       <div class="lp-srv-card">
         <div class="lp-srv-ico">👨‍🌾</div>
         <div class="lp-srv-name">Asistencia Técnica</div>
-        <div class="lp-srv-desc">Red de agrónomos certificados de Farmex Perú especializados en palta Hass y arándano. Visitas de campo y soporte continuo.</div>
-        <div class="lp-srv-qui"><strong>Quiénes somos:</strong> Agrónomos con +10 años en campo en La Libertad, Ica, Piura y Lambayeque. <strong>Misión:</strong> Reducir las pérdidas evitables del 20–30% del productor.</div>
+        <div class="lp-srv-desc">Red de agrónomos certificados especializados en palta Hass y arándano con +10 años en campo en La Libertad, Ica, Piura y Lambayeque. Visitas y soporte continuo.</div>
       </div>
       <div class="lp-srv-card">
         <div class="lp-srv-ico">🤝</div>
         <div class="lp-srv-name">Marketplace & Exportación</div>
-        <div class="lp-srv-desc">Conectamos tu producción directamente con exportadores, supermercados e importadores internacionales. Tu vitrina verificada con foto y certificaciones.</div>
-        <div class="lp-srv-qui"><strong>Quiénes somos:</strong> Plataforma de conexión comercial entre productores verificados y compradores del mundo. <strong>Misión:</strong> Eliminar la fragmentación del pequeño productor frente a grandes compradores.</div>
+        <div class="lp-srv-desc">Conectamos tu producción directamente con exportadores, supermercados e importadores internacionales. Tu vitrina verificada con foto, certificaciones e historial.</div>
       </div>
     </div>
   </section>
