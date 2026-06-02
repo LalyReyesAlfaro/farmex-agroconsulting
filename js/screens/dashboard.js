@@ -81,7 +81,9 @@ export const html = `
   </div>
   <div style="margin-top:12px;padding:10px 14px;background:#f0faf3;border-left:3px solid #27ae60;border-radius:0 8px 8px 0;font-size:12px;color:#555;">
     <div style="font-weight:700;color:#1e8449;margin-bottom:6px;">📚 Referencias técnicas</div>
-    <div style="margin-bottom:4px;">📄 <a href="docs/fitosanitarios-palta.pdf" target="_blank" rel="noopener" style="color:#1e8449;text-decoration:none;font-weight:600;">Rojas Guerrero (2018) – Bioestimulantes foliares en palta Hass, UNP · +84% rendimiento</a></div>
+    <div style="margin-bottom:4px;">📄 <a href="docs/fitosanitarios-palta.pdf" target="_blank" rel="noopener" style="color:#1e8449;text-decoration:none;font-weight:600;">Rojas Guerrero (2018) – Bioestimulantes foliares en palta Hass, UNP</a></div>
+    <div style="margin-bottom:4px;">📄 <a href="docs/palta-ciclo-productivo.pdf" target="_blank" rel="noopener" style="color:#1e8449;text-decoration:none;font-weight:600;">Ciclo productivo de la palta – Guía técnica</a></div>
+    <div style="margin-bottom:4px;">📄 <a href="docs/palta-peru.pdf" target="_blank" rel="noopener" style="color:#1e8449;text-decoration:none;font-weight:600;">Palta Perú – Perfil técnico y comercial del cultivo</a></div>
     <div style="margin-bottom:4px;">🌿 <a href="https://www.prohass.com.pe" target="_blank" rel="noopener" style="color:#1e8449;text-decoration:none;font-weight:600;">PROHASS – Asociación de Productores de Palta Hass del Perú</a></div>
     <div>🏛️ <a href="https://www.gob.pe/midagri" target="_blank" rel="noopener" style="color:#1e8449;text-decoration:none;font-weight:600;">MIDAGRI – Guía técnica y estadísticas de producción de palta</a></div>
   </div>
@@ -117,7 +119,9 @@ export const html = `
   </div>
   <div style="margin-top:10px;padding:10px 14px;background:#EAF3FB;border-left:3px solid #2980B9;border-radius:0 8px 8px 0;font-size:12px;color:#1a2e4a;">
     <div style="font-weight:700;color:#2980B9;margin-bottom:6px;">📚 Referencias técnicas</div>
-    <div style="margin-bottom:4px;">🫐 <a href="https://www.peruberries.pe" target="_blank" rel="noopener" style="color:#2980B9;text-decoration:none;font-weight:600;">Perú Berries – Asociación de Productores y Exportadores de Arándanos del Perú</a></div>
+    <div style="margin-bottom:4px;">📄 <a href="docs/manual-plagas-arandano.pdf" target="_blank" rel="noopener" style="color:#2980B9;text-decoration:none;font-weight:600;">Manual de plagas y enfermedades en arándano</a></div>
+    <div style="margin-bottom:4px;">📄 <a href="docs/manual-tecnico-arandano.pdf" target="_blank" rel="noopener" style="color:#2980B9;text-decoration:none;font-weight:600;">Manual técnico de producción de arándano</a></div>
+    <div style="margin-bottom:4px;">🫐 <a href="https://www.peruberries.pe" target="_blank" rel="noopener" style="color:#2980B9;text-decoration:none;font-weight:600;">Perú Berries – Asociación de Productores y Exportadores de Arándanos</a></div>
     <div style="margin-bottom:4px;">🏛️ <a href="https://www.gob.pe/midagri" target="_blank" rel="noopener" style="color:#2980B9;text-decoration:none;font-weight:600;">MIDAGRI – Estadísticas y guías de producción de arándano</a></div>
     <div>📋 <a href="https://www.senasa.gob.pe" target="_blank" rel="noopener" style="color:#2980B9;text-decoration:none;font-weight:600;">SENASA – Protocolos fitosanitarios para exportación de arándano fresco</a></div>
   </div>
