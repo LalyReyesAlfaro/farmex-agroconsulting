@@ -350,7 +350,7 @@ export function init() {
     const data = await window.fbAuth.login(email, pass);
     if (data.access_token) {
       window.hideAuth();
-      window.goScreen('dashboard');
+      window.goScreen('encuesta');
     } else {
       showErr(err, data.error || 'Email o contraseña incorrectos.');
       btn.textContent = 'Ingresar al portal →'; btn.disabled = false;
@@ -375,7 +375,7 @@ export function init() {
     const data = await window.fbAuth.register(email, pass, { nombre, region });
     if (data.access_token || data.user) {
       window.hideAuth();
-      window.goScreen('dashboard');
+      window.goScreen('encuesta');
     } else {
       showErr(err, data.error || 'Error al crear la cuenta.');
       btn.textContent = 'Crear mi cuenta →'; btn.disabled = false;

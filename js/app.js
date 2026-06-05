@@ -83,7 +83,7 @@ const SCREENS = { login, encuesta, dashboard, servicios, parcelas, creditos, mer
 const TITLES = {
   login:     ['Acceder al Portal',    'Ingresa o regístrate para continuar'],
   encuesta:  ['Mi Perfil',            'Raúl García Mendoza · La Libertad · 32 ha · Palta Hass'],
-  dashboard: ['Mi Fundo',             'Buenos días, Raúl — Campaña Palta Hass 2026 en curso'],
+  dashboard: ['Mis Cultivos',          'Buenos días, Raúl — Campaña Palta Hass 2026 en curso'],
   servicios: ['Nuestros Servicios',   'Quiénes somos y qué ofrecemos en Farmex Capital'],
   parcelas:  ['Mis Hectáreas',        '2 áreas activas · La Libertad · 32 ha en total'],
   creditos:  ['Créditos',             'Productos disponibles y simulador de crédito agrícola'],
@@ -137,7 +137,7 @@ mountScreens();
 
 if (window.fbAuth.isLoggedIn()) {
   setSidebarVisibility(true);
-  goScreen('dashboard');
+  goScreen('encuesta');
 } else {
   setSidebarVisibility(false);
   goScreen('login');

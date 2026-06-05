@@ -56,26 +56,24 @@ export const html = `
 
 <!-- Ciclo Palta Hass -->
 <div class="card">
-  <div class="ch"><div><div class="ct">🥑 Ciclo de campaña · Palta Hass 2026</div><div class="cs">Etapa 4 de 8 — Engorde de fruto · Cosecha en 112 días</div></div><span class="badge by">En curso</span></div>
+  <div class="ch"><div><div class="ct">🥑 Ciclo de campaña · Palta Hass 2026</div><div class="cs">Etapa 4 de 7 — Maduración · Cosecha en 112 días</div></div><span class="badge by">En curso</span></div>
   <div class="dash-cycle-visual">
     <div class="dcv-step done"><div class="dcv-ico">✅</div><div class="dcv-lbl">Poda</div><div class="dcv-mes">Feb</div></div>
     <div class="dcv-line done"></div>
-    <div class="dcv-step done"><div class="dcv-ico">✅</div><div class="dcv-lbl">Floración</div><div class="dcv-mes">Mar</div></div>
+    <div class="dcv-step done"><div class="dcv-ico">✅</div><div class="dcv-lbl">Crec. Vegetativo</div><div class="dcv-mes">Mar</div></div>
     <div class="dcv-line done"></div>
-    <div class="dcv-step done"><div class="dcv-ico">✅</div><div class="dcv-lbl">Cuajado</div><div class="dcv-mes">Abr</div></div>
+    <div class="dcv-step done"><div class="dcv-ico">✅</div><div class="dcv-lbl">Floración</div><div class="dcv-mes">Abr</div></div>
     <div class="dcv-line active"></div>
-    <div class="dcv-step active"><div class="dcv-ico">🔄</div><div class="dcv-lbl">Engorde</div><div class="dcv-mes">May</div></div>
-    <div class="dcv-line"></div>
-    <div class="dcv-step"><div class="dcv-ico">💊</div><div class="dcv-lbl">Nutrición</div><div class="dcv-mes">Jun</div></div>
+    <div class="dcv-step active"><div class="dcv-ico">🔄</div><div class="dcv-lbl">Maduración</div><div class="dcv-mes">May</div></div>
     <div class="dcv-line"></div>
     <div class="dcv-step"><div class="dcv-ico">✂️</div><div class="dcv-lbl">Cosecha</div><div class="dcv-mes">Ago</div></div>
     <div class="dcv-line"></div>
     <div class="dcv-step"><div class="dcv-ico">📦</div><div class="dcv-lbl">Empaque</div><div class="dcv-mes">Sep</div></div>
     <div class="dcv-line"></div>
-    <div class="dcv-step"><div class="dcv-ico">🚢</div><div class="dcv-lbl">Exportar</div><div class="dcv-mes">Oct</div></div>
+    <div class="dcv-step"><div class="dcv-ico">🚢</div><div class="dcv-lbl">Exportación</div><div class="dcv-mes">Oct</div></div>
   </div>
   <div class="cyc-info">
-    <div class="ci-box"><div class="ci-val">4 / 8</div><div class="ci-lbl">Etapa actual</div></div>
+    <div class="ci-box"><div class="ci-val">4 / 7</div><div class="ci-lbl">Etapa actual</div></div>
     <div class="ci-box"><div class="ci-val">112 días</div><div class="ci-lbl">Para cosecha</div></div>
     <div class="ci-box"><div class="ci-val">~128 TM</div><div class="ci-lbl">Proyección</div></div>
   </div>
@@ -91,26 +89,24 @@ export const html = `
 
 <!-- Ciclo Arándano -->
 <div class="card">
-  <div class="ch"><div><div class="ct">🫐 Ciclo de campaña · Arándano Biloxi 2026</div><div class="cs">Etapa 2 de 8 — Floración · Primera campaña productiva</div></div><span class="badge bb">Floración</span></div>
+  <div class="ch"><div><div class="ct">🫐 Ciclo de campaña · Arándano Biloxi 2026</div><div class="cs">Etapa 3 de 7 — Floración · Primera campaña productiva</div></div><span class="badge bb">Floración</span></div>
   <div class="dash-cycle-visual">
     <div class="dcv-step done"><div class="dcv-ico">✅</div><div class="dcv-lbl">Plantación</div><div class="dcv-mes">Ene</div></div>
     <div class="dcv-line done"></div>
-    <div class="dcv-step active" style="--dcv-color:#2980B9;"><div class="dcv-ico">🌸</div><div class="dcv-lbl">Floración</div><div class="dcv-mes">May</div></div>
+    <div class="dcv-step done" style="--dcv-color:#2980B9;"><div class="dcv-ico">✅</div><div class="dcv-lbl">Crec. Vegetativo</div><div class="dcv-mes">Feb</div></div>
     <div class="dcv-line active" style="background:#2980B9;"></div>
-    <div class="dcv-step"><div class="dcv-ico">🫐</div><div class="dcv-lbl">Cuajado</div><div class="dcv-mes">Jun</div></div>
+    <div class="dcv-step active" style="--dcv-color:#2980B9;"><div class="dcv-ico">🌸</div><div class="dcv-lbl">Floración</div><div class="dcv-mes">May</div></div>
     <div class="dcv-line"></div>
-    <div class="dcv-step"><div class="dcv-ico">💧</div><div class="dcv-lbl">Engorde</div><div class="dcv-mes">Jul</div></div>
-    <div class="dcv-line"></div>
-    <div class="dcv-step"><div class="dcv-ico">💊</div><div class="dcv-lbl">Nutrición</div><div class="dcv-mes">Ago</div></div>
-    <div class="dcv-line"></div>
-    <div class="dcv-step"><div class="dcv-ico">🔵</div><div class="dcv-lbl">Maduración</div><div class="dcv-mes">Sep</div></div>
+    <div class="dcv-step"><div class="dcv-ico">🔵</div><div class="dcv-lbl">Maduración</div><div class="dcv-mes">Jul</div></div>
     <div class="dcv-line"></div>
     <div class="dcv-step"><div class="dcv-ico">✂️</div><div class="dcv-lbl">Cosecha</div><div class="dcv-mes">Oct</div></div>
     <div class="dcv-line"></div>
-    <div class="dcv-step"><div class="dcv-ico">📦</div><div class="dcv-lbl">Exportar</div><div class="dcv-mes">Nov</div></div>
+    <div class="dcv-step"><div class="dcv-ico">📦</div><div class="dcv-lbl">Empaque</div><div class="dcv-mes">Nov</div></div>
+    <div class="dcv-line"></div>
+    <div class="dcv-step"><div class="dcv-ico">🚢</div><div class="dcv-lbl">Exportación</div><div class="dcv-mes">Nov</div></div>
   </div>
   <div class="cyc-info">
-    <div class="ci-box"><div class="ci-val">2 / 8</div><div class="ci-lbl">Etapa actual</div></div>
+    <div class="ci-box"><div class="ci-val">3 / 7</div><div class="ci-lbl">Etapa actual</div></div>
     <div class="ci-box"><div class="ci-val">~165 días</div><div class="ci-lbl">Para cosecha</div></div>
     <div class="ci-box"><div class="ci-val">~16 TM</div><div class="ci-lbl">Proyección</div></div>
   </div>
