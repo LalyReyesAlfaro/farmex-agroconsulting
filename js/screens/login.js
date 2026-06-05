@@ -58,23 +58,23 @@ export const html = `
     <div class="lp-section-header tc">
       <div class="lp-stag">Sobre Farmex Capital</div>
       <h2 class="lp-sh2">Quiénes somos</h2>
-      <p class="lp-sp">Farmex Capital es la primera plataforma AgriFintech especializada en pequeños y medianos agroexportadores de palta y arándano en la costa del Perú. Combinamos financiamiento inteligente, data agrícola en tiempo real, scoring alternativo con IA, asistencia técnica y conexión directa con compradores internacionales.</p>
+      <p class="lp-sp">Farmex Capital es una solución integral de colaboración con pequeños y medianos agroexportadores de palta y arándano en la costa del Perú. Combinamos financiamiento directo, asistencia técnica en campo y evaluación productiva — actuando como certificador técnico del agricultor y su aval ante las instituciones financieras, promoviendo una agricultura sostenible y competitiva.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:8px;">
       <div style="background:#fff;border-radius:12px;padding:20px 22px;border:1px solid #e5e9ef;box-shadow:0 2px 8px rgba(0,0,0,.05);">
         <div style="font-size:26px;margin-bottom:8px;">🎯</div>
         <div style="font-size:14px;font-weight:700;color:#1a2e1a;margin-bottom:6px;">Nuestra misión</div>
-        <p style="font-size:13px;color:#555;line-height:1.7;margin:0;">"Convertir ciclos agrícolas en flujo de caja predecible, siendo el habilitador financiero del pequeño y mediano agroexportador peruano que el sistema financiero tradicional ha ignorado por décadas."</p>
+        <p style="font-size:13px;color:#555;line-height:1.7;margin:0;">Ser la solución integral que acompaña al agricultor peruano: financiamos su campaña, evaluamos su capacidad productiva y actuamos como su certificador y aval técnico ante las instituciones financieras — para que acceda al crédito que necesita, cuando lo necesita.</p>
       </div>
       <div style="background:#fff;border-radius:12px;padding:20px 22px;border:1px solid #e5e9ef;box-shadow:0 2px 8px rgba(0,0,0,.05);">
         <div style="font-size:26px;margin-bottom:8px;">👥</div>
         <div style="font-size:14px;font-weight:700;color:#1a2e1a;margin-bottom:6px;">Nuestro equipo</div>
-        <p style="font-size:13px;color:#555;line-height:1.7;margin:0;">Analistas financieros con experiencia en COFIDE y Agrobanco, ingenieros agrónomos con +10 años en campo, e ingenieros de datos especializados en IA agrícola. Entendemos los ciclos productivos porque hemos estado en el campo.</p>
+        <p style="font-size:13px;color:#555;line-height:1.7;margin:0;">Ingenieros agrónomos especializados en palta Hass y arándano con profundo conocimiento del mercado local y más de 10 años en campo. Respaldados por analistas financieros agroespecializados. Conocemos el cultivo porque hemos estado en él.</p>
       </div>
       <div style="background:#fff;border-radius:12px;padding:20px 22px;border:1px solid #e5e9ef;box-shadow:0 2px 8px rgba(0,0,0,.05);">
         <div style="font-size:26px;margin-bottom:8px;">🌿</div>
         <div style="font-size:14px;font-weight:700;color:#1a2e1a;margin-bottom:6px;">El problema que resolvemos</div>
-        <p style="font-size:13px;color:#555;line-height:1.7;margin:0;">El productor piensa por ciclos, no por trimestres. La banca tradicional ignora ese ritmo. Farmex diseña cada producto financiero en torno al calendario agrícola real del cultivo.</p>
+        <p style="font-size:13px;color:#555;line-height:1.7;margin:0;">El agricultor no solo necesita dinero — necesita acompañamiento técnico real. La banca tradicional financia sin entender el cultivo. Farmex evalúa al productor en campo, diseña el crédito adecuado a su ciclo y lo acompaña en cada etapa de su campaña, desde la siembra hasta la exportación.</p>
       </div>
     </div>
     <div style="text-align:center;margin-top:20px;padding:14px 20px;background:#E8F8EE;border-radius:10px;font-size:13px;color:#1a5c2e;">
