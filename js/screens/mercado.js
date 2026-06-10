@@ -1,13 +1,31 @@
+const USD_RATE = 3.75;
+
+const IDX_PEN = {
+  palta:    4.20,
+  arandano: 12.50,
+};
+
+const CHART_PEN = {
+  palta:    [3.60,3.75,3.90,4.00,4.07,4.20],
+  arandano: [4.20,4.10,4.30,4.50,4.20,4.17],
+};
+
 export const html = `
-<div class="stitle">📈 Índices de Mercado</div>
+<div class="stitle" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+  <span>📈 Índices de Mercado</span>
+  <div class="curr-toggle" style="display:inline-flex;border:1px solid #ddd;border-radius:8px;overflow:hidden;">
+    <button class="curr-btn active" id="curr-pen" data-curr="PEN" style="padding:6px 16px;border:none;background:#27ae60;color:#fff;font-size:12px;font-weight:600;cursor:pointer;">🇵🇪 Soles (S/)</button>
+    <button class="curr-btn" id="curr-usd" data-curr="USD" style="padding:6px 16px;border:none;background:#fff;color:#555;font-size:12px;font-weight:600;cursor:pointer;">🇺🇸 Dólares (US$)</button>
+  </div>
+</div>
 <div class="idx-grid">
-  <div class="idx"><div class="idx-n">🥑 Palta Hass FOB</div><div class="idx-v">4.20 <span class="idx-u">S//kg</span></div><div class="idx-c up">↑ +3.2% vs mes ant.</div></div>
-  <div class="idx"><div class="idx-n">🫐 Arándano FOB</div><div class="idx-v">12.50 <span class="idx-u">S//kg</span></div><div class="idx-c dn">↓ -1.8% vs mes ant.</div></div>
+  <div class="idx"><div class="idx-n">🥑 Palta Hass FOB</div><div class="idx-v"><span id="idx-palta">4.20</span> <span class="idx-u" id="idx-palta-u">S//kg</span></div><div class="idx-c up">↑ +3.2% vs mes ant.</div></div>
+  <div class="idx"><div class="idx-n">🫐 Arándano FOB</div><div class="idx-v"><span id="idx-arandano">12.50</span> <span class="idx-u" id="idx-arandano-u">S//kg</span></div><div class="idx-c dn">↓ -1.8% vs mes ant.</div></div>
   <div class="idx"><div class="idx-n">💵 Tipo de cambio</div><div class="idx-v">3.75 <span class="idx-u">S//$</span></div><div class="idx-c up">↑ +0.5% semanal</div></div>
   <div class="idx"><div class="idx-n">📦 Exportación agro</div><div class="idx-v">+12% <span class="idx-u">YoY</span></div><div class="idx-c up">↑ Tendencia positiva</div></div>
 </div>
 <div class="card" style="margin-bottom:18px;">
-  <div class="ch"><div><div class="ct">Tendencia de precios · Últimos 6 meses</div><div class="cs">Palta Hass y Arándano · S/ por kg</div></div></div>
+  <div class="ch"><div><div class="ct">Tendencia de precios · Últimos 6 meses</div><div class="cs" id="ch-mercado-sub">Palta Hass y Arándano · S/ por kg</div></div></div>
   <div class="ch-wrap" style="height:220px;"><canvas id="ch-mercado"></canvas></div>
 </div>
 <div class="stitle">🤝 Compradores activos</div>
@@ -19,16 +37,46 @@ export const html = `
 `;
 
 export function init() {
-  new Chart(document.getElementById('ch-mercado').getContext('2d'), {
+  const chart = new Chart(document.getElementById('ch-mercado').getContext('2d'), {
     type: 'line',
     data: { labels: ['Dic','Ene','Feb','Mar','Abr','May'],
       datasets: [
-        { label:'Palta Hass (S//kg)', data:[3.60,3.75,3.90,4.00,4.07,4.20], borderColor:'#C8961E', backgroundColor:'rgba(200,150,30,.06)', borderWidth:2.5, pointRadius:4, tension:.4, fill:true },
-        { label:'Arándano ÷3',        data:[4.20,4.10,4.30,4.50,4.20,4.17], borderColor:'#2D7A4F', backgroundColor:'rgba(45,122,79,.06)',    borderWidth:2.5, pointRadius:4, tension:.4, fill:true }
+        { label:'Palta Hass (S//kg)', data:[...CHART_PEN.palta], borderColor:'#C8961E', backgroundColor:'rgba(200,150,30,.06)', borderWidth:2.5, pointRadius:4, tension:.4, fill:true },
+        { label:'Arándano ÷3',        data:[...CHART_PEN.arandano], borderColor:'#2D7A4F', backgroundColor:'rgba(45,122,79,.06)',    borderWidth:2.5, pointRadius:4, tension:.4, fill:true }
       ] },
     options: { responsive:true, maintainAspectRatio:false,
       plugins:{ legend:{ position:'top', labels:{ font:{ size:11 } } } },
       scales:{ x:{ grid:{ display:false }, ticks:{ font:{ size:11 } } },
                y:{ grid:{ color:'#EEF2EE' }, ticks:{ font:{ size:11 }, callback: v => 'S/ '+v.toFixed(2) } } } }
   });
+
+  function setCurrency(curr) {
+    const usd = curr === 'USD';
+    document.getElementById('curr-pen').classList.toggle('active', !usd);
+    document.getElementById('curr-usd').classList.toggle('active', usd);
+    document.getElementById('curr-pen').style.background = usd ? '#fff' : '#27ae60';
+    document.getElementById('curr-pen').style.color      = usd ? '#555' : '#fff';
+    document.getElementById('curr-usd').style.background = usd ? '#27ae60' : '#fff';
+    document.getElementById('curr-usd').style.color      = usd ? '#fff' : '#555';
+
+    const palta    = usd ? IDX_PEN.palta / USD_RATE    : IDX_PEN.palta;
+    const arandano = usd ? IDX_PEN.arandano / USD_RATE : IDX_PEN.arandano;
+    document.getElementById('idx-palta').textContent    = palta.toFixed(2);
+    document.getElementById('idx-arandano').textContent = arandano.toFixed(2);
+    document.getElementById('idx-palta-u').textContent    = usd ? 'US$/kg' : 'S//kg';
+    document.getElementById('idx-arandano-u').textContent = usd ? 'US$/kg' : 'S//kg';
+
+    document.getElementById('ch-mercado-sub').textContent = usd
+      ? 'Palta Hass y Arándano · US$ por kg'
+      : 'Palta Hass y Arándano · S/ por kg';
+
+    const factor = usd ? (1 / USD_RATE) : 1;
+    chart.data.datasets[0].data = CHART_PEN.palta.map(v => v * factor);
+    chart.data.datasets[1].data = CHART_PEN.arandano.map(v => v * factor);
+    chart.options.scales.y.ticks.callback = v => (usd ? 'US$ ' : 'S/ ') + v.toFixed(2);
+    chart.update();
+  }
+
+  document.getElementById('curr-pen').addEventListener('click', () => setCurrency('PEN'));
+  document.getElementById('curr-usd').addEventListener('click', () => setCurrency('USD'));
 }

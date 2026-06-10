@@ -10,7 +10,7 @@ export const html = `
   </div>
   <div class="srv-block-body">
     <div style="padding:12px 16px;background:#FDF3DC;border-radius:8px;font-size:13px;color:#7d5a0f;line-height:1.6;">
-      8 productos disponibles por etapa productiva — fertilización, riego, campaña, postcosecha, tecnificación, control fitosanitario, bioestimulación y adelanto de exportación. Tasas desde 1.4% mensual con plazos alineados a tu ciclo de cosecha. Financiamiento respaldado en normativa de <a href="https://www.gob.pe/midagri" target="_blank" rel="noopener" style="color:#a0720f;font-weight:600;">MIDAGRI</a> y <a href="https://www.senasa.gob.pe" target="_blank" rel="noopener" style="color:#a0720f;font-weight:600;">SENASA</a>.
+      6 productos disponibles por etapa productiva — fertilización, campaña, riego, postcosecha, control fitosanitario y bioestimulación. Tasas desde 1.5% mensual con plazos alineados a tu ciclo de cosecha. Productos fitosanitarios y de bioestimulación con catálogo de <a href="https://www.farmexperu.pe" target="_blank" rel="noopener" style="color:#a0720f;font-weight:600;">Farmex Perú</a>, créditos de campaña y postcosecha respaldados por <a href="https://www.banbif.com.pe" target="_blank" rel="noopener" style="color:#a0720f;font-weight:600;">BanBif</a>.
     </div>
     <button onclick="window.goScreen('creditos')" style="margin-top:12px;background:none;border:1.5px solid #c49a1a;color:#c49a1a;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;">Ver todos los créditos y simular →</button>
   </div>

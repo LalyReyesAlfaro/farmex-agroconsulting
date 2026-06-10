@@ -5,6 +5,7 @@ export const html = `
 </div>
 <div class="vit-layout">
   <div class="vit-controls">
+    <div class="stitle" style="margin-top:0;">🌿 MI VITRINA</div>
     <div class="vit-ctrl-card">
       <div class="vit-ctrl-title">🔗 Compartir perfil</div>
       <div style="font-size:12px;color:var(--txt-m);margin-bottom:10px;">Cualquier persona con este link puede ver tu perfil público verificado por Farmex.</div>
@@ -23,6 +24,11 @@ export const html = `
       <div class="toggle-row"><span class="toggle-lbl">Historial de producción</span><label class="toggle"><input type="checkbox" checked><span class="toggle-slider"></span></label></div>
       <div class="toggle-row"><span class="toggle-lbl">Oferta disponible</span><label class="toggle"><input type="checkbox" checked><span class="toggle-slider"></span></label></div>
       <div class="toggle-row"><span class="toggle-lbl">Datos de contacto</span><label class="toggle"><input type="checkbox"><span class="toggle-slider"></span></label></div>
+    </div>
+    <div class="vit-ctrl-card">
+      <div class="vit-ctrl-title">📍 Ubicación geográfica</div>
+      <div style="font-size:12px;color:var(--txt-m);margin-bottom:10px;">Vista satelital de tu finca · Virú, La Libertad.</div>
+      <div id="vit-map" style="height:180px;border-radius:8px;overflow:hidden;"></div>
     </div>
     <div class="vit-ctrl-card">
       <div class="vit-ctrl-title">📊 Estadísticas de visitas</div>
@@ -133,4 +139,10 @@ export function init() {
     btn.classList.add('copied');
     setTimeout(() => { btn.textContent = 'Copiar'; btn.classList.remove('copied'); }, 2200);
   });
+
+  const map = L.map('vit-map', { zoomControl: false, attributionControl: false }).setView([-8.4167, -78.75], 13);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    maxZoom: 18,
+  }).addTo(map);
+  L.marker([-8.4167, -78.75]).addTo(map).bindPopup('Finca Raúl García · 32 ha · Virú, La Libertad');
 }

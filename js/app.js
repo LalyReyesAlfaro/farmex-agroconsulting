@@ -90,7 +90,7 @@ const TITLES = {
   mercado:   ['Mercado',              'Precios en tiempo real y compradores activos'],
   scoring:   ['Mi Score',             'Scoring Agrícola Farmex AI · 760 / 1000'],
   clima:     ['Clima & Riesgos',      'La Libertad · Actualizado hace 2 horas'],
-  vitrina:   ['Mi Vitrina',           'Comparte tu perfil verificado con compradores e importadores'],
+  vitrina:   ['Marketplace & Conexión Comercial', 'Comparte tu perfil verificado con compradores e importadores'],
 };
 
 function mountScreens() {
