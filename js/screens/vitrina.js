@@ -1,7 +1,7 @@
 export const html = `
 <div style="background:linear-gradient(135deg,#E8F8EE,#FDF3DC);border:1px solid rgba(39,174,96,.2);border-radius:10px;padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;gap:12px;">
   <span style="font-size:20px;">💡</span>
-  <div><div style="font-size:13px;font-weight:600;color:var(--g-dark);">Comparte tu perfil verificado con compradores e importadores</div><div style="font-size:12px;color:var(--txt-s);margin-top:2px;">Tu vitrina muestra tu historial productivo, score Farmex, certificaciones y productos disponibles. Es tu carta de presentación comercial.</div></div>
+  <div><div style="font-size:13px;font-weight:600;color:var(--g-dark);">Comparte tu perfil verificado con compradores e importadores</div><div style="font-size:12px;color:var(--txt-s);margin-top:2px;">Tu vitrina muestra tu historial productivo, Score Productivo, certificaciones y productos disponibles. Es tu carta de presentación comercial.</div></div>
 </div>
 <div class="vit-layout">
   <div class="vit-controls">
@@ -18,7 +18,7 @@ export const html = `
     </div>
     <div class="vit-ctrl-card">
       <div class="vit-ctrl-title">⚙️ Qué mostrar en tu vitrina</div>
-      <div class="toggle-row"><span class="toggle-lbl">Score Farmex verificado</span><label class="toggle"><input type="checkbox" checked><span class="toggle-slider"></span></label></div>
+      <div class="toggle-row"><span class="toggle-lbl">Score Productivo verificado</span><label class="toggle"><input type="checkbox" checked><span class="toggle-slider"></span></label></div>
       <div class="toggle-row"><span class="toggle-lbl">Certificaciones</span><label class="toggle"><input type="checkbox" checked><span class="toggle-slider"></span></label></div>
       <div class="toggle-row"><span class="toggle-lbl">Hectáreas y cultivos</span><label class="toggle"><input type="checkbox" checked><span class="toggle-slider"></span></label></div>
       <div class="toggle-row"><span class="toggle-lbl">Historial de producción</span><label class="toggle"><input type="checkbox" checked><span class="toggle-slider"></span></label></div>
@@ -69,14 +69,13 @@ export const html = `
         </div>
         <div class="pub-score-float">
           <div style="font-size:28px;">⭐</div>
-          <div><div class="pub-score-lbl">Score Farmex</div><div class="pub-score-num">760</div><div class="pub-score-cat">Muy Bueno · Top 15%</div></div>
+          <div><div class="pub-score-lbl">Score Productivo</div><div class="pub-score-num">760</div><div class="pub-score-cat">Muy Bueno · Top 15%</div></div>
         </div>
       </div>
 
       <div class="pub-body">
         <div class="pub-certs">
           <span class="cert-tag">✓ Global G.A.P.</span>
-          <span class="cert-tag">✓ SENASA Certificado</span>
           <span class="cert-tag">✓ Trazabilidad completa</span>
           <span class="cert-tag">✓ Riego tecnificado</span>
           <span class="cert-tag" style="background:#E8F4FD;color:var(--info);border-color:rgba(41,128,185,.2);">📡 Monitoreo satelital activo</span>

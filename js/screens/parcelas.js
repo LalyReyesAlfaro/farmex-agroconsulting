@@ -71,7 +71,7 @@ export const html = `
         <div class="hfcd-row"><span>Suelo</span><strong>Franco arenoso · pH 6.2</strong></div>
         <div class="hfcd-row"><span>Riego</span><strong>Goteo tecnificado</strong></div>
         <div class="hfcd-row"><span>Cosecha est.</span><strong>Ago–Sep 2026</strong></div>
-        <div class="hfcd-row"><span>Cert.</span><strong>Global G.A.P. · SENASA</strong></div>
+        <div class="hfcd-row"><span>Cert.</span><strong>Global G.A.P.</strong></div>
       </div>
     </div>
 
@@ -95,7 +95,7 @@ export const html = `
         <div class="hfcd-row"><span>Suelo</span><strong>Franco arcilloso · pH 6.5</strong></div>
         <div class="hfcd-row"><span>Riego</span><strong>Aspersión + goteo</strong></div>
         <div class="hfcd-row"><span>Cosecha est.</span><strong>Sep–Oct 2026</strong></div>
-        <div class="hfcd-row"><span>Cert.</span><strong>SENASA</strong></div>
+        <div class="hfcd-row"><span>Cert.</span><strong>Global G.A.P.</strong></div>
       </div>
     </div>
 

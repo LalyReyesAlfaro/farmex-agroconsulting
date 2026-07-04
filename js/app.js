@@ -88,7 +88,7 @@ const TITLES = {
   parcelas:  ['Mis Hectáreas',        '2 áreas activas · La Libertad · 32 ha en total'],
   creditos:  ['Créditos',             'Productos disponibles y simulador de crédito agrícola'],
   mercado:   ['Mercado',              'Precios en tiempo real y compradores activos'],
-  scoring:   ['Mi Score',             'Scoring Agrícola Farmex AI · 760 / 1000'],
+  scoring:   ['Score Productivo',      'Indicador de capacidad productiva y confianza · 760 / 1000'],
   clima:     ['Clima & Riesgos',      'La Libertad · Actualizado hace 2 horas'],
   vitrina:   ['Marketplace & Conexión Comercial', 'Comparte tu perfil verificado con compradores e importadores'],
 };

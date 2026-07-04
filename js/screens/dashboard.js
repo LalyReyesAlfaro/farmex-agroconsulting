@@ -119,7 +119,7 @@ export const html = `
     <div style="margin-bottom:4px;">📄 <a href="docs/manual-tecnico-arandano.pdf" target="_blank" rel="noopener" style="color:#2980B9;text-decoration:none;font-weight:600;">Manual técnico de producción de arándano</a></div>
     <div style="margin-bottom:4px;">🫐 <a href="https://www.peruberries.pe" target="_blank" rel="noopener" style="color:#2980B9;text-decoration:none;font-weight:600;">Perú Berries – Asociación de Productores y Exportadores de Arándanos</a></div>
     <div style="margin-bottom:4px;">🏛️ <a href="https://www.gob.pe/midagri" target="_blank" rel="noopener" style="color:#2980B9;text-decoration:none;font-weight:600;">MIDAGRI – Estadísticas y guías de producción de arándano</a></div>
-    <div>📋 <a href="https://www.senasa.gob.pe" target="_blank" rel="noopener" style="color:#2980B9;text-decoration:none;font-weight:600;">SENASA – Protocolos fitosanitarios para exportación de arándano fresco</a></div>
+    <div>🌍 <a href="https://www.promperu.gob.pe" target="_blank" rel="noopener" style="color:#2980B9;text-decoration:none;font-weight:600;">PromPerú – Guías de exportación de arándano fresco</a></div>
   </div>
 </div>
 

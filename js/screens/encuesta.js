@@ -50,7 +50,6 @@ export const html = `
       <div class="ch"><div class="ct">📜 Certificaciones</div></div>
       <div style="display:flex;flex-direction:column;gap:8px;">
         <div class="cert-row ok"><span class="cert-ico">✅</span><div><div class="cert-n">Global G.A.P.</div><div class="cert-d">Certificado · Vigente hasta Dic 2026</div></div></div>
-        <div class="cert-row ok"><span class="cert-ico">✅</span><div><div class="cert-n">SENASA</div><div class="cert-d">Registro sanitario activo</div></div></div>
         <div class="cert-row ok"><span class="cert-ico">✅</span><div><div class="cert-n">Trazabilidad completa</div><div class="cert-d">Código QR por lote activado</div></div></div>
         <div class="cert-row warn"><span class="cert-ico">⏳</span><div><div class="cert-n">Certificado de posesión</div><div class="cert-d">Pendiente de subir (+25 pts score)</div></div></div>
       </div>
@@ -73,7 +72,7 @@ export const html = `
   <div class="perfil-right">
 
     <div class="card" style="margin-bottom:14px;">
-      <div class="ch"><div><div class="ct">⭐ Mi Score Farmex AI</div><div class="cs">Actualizado · 13 Mayo 2026</div></div></div>
+      <div class="ch"><div><div class="ct">⭐ Score Productivo Farmex</div><div class="cs">Actualizado · 13 Mayo 2026</div></div></div>
       <div style="display:flex;align-items:center;gap:18px;margin-bottom:14px;">
         <div style="text-align:center;background:var(--g-dark);padding:16px 20px;border-radius:10px;min-width:100px;">
           <div style="font-size:36px;font-weight:800;color:var(--gold-l);">760</div>

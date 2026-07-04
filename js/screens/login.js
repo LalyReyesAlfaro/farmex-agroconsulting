@@ -78,7 +78,7 @@ export const html = `
       </div>
     </div>
     <div style="text-align:center;margin-top:20px;padding:14px 20px;background:#E8F8EE;border-radius:10px;font-size:13px;color:#1a5c2e;">
-      Alineados con: <a href="https://www.gob.pe/midagri" target="_blank" rel="noopener" style="color:#1e8449;font-weight:600;text-decoration:none;">MIDAGRI</a> &nbsp;·&nbsp; <a href="https://www.senasa.gob.pe" target="_blank" rel="noopener" style="color:#1e8449;font-weight:600;text-decoration:none;">SENASA</a> &nbsp;·&nbsp; <a href="https://www.prohass.com.pe" target="_blank" rel="noopener" style="color:#1e8449;font-weight:600;text-decoration:none;">PROHASS</a> &nbsp;·&nbsp; <a href="https://www.peruberries.pe" target="_blank" rel="noopener" style="color:#1e8449;font-weight:600;text-decoration:none;">Perú Berries</a> &nbsp;·&nbsp; <a href="https://www.promperu.gob.pe" target="_blank" rel="noopener" style="color:#1e8449;font-weight:600;text-decoration:none;">PromPerú</a>
+      Alineados con: <a href="https://www.gob.pe/midagri" target="_blank" rel="noopener" style="color:#1e8449;font-weight:600;text-decoration:none;">MIDAGRI</a> &nbsp;·&nbsp; <a href="https://www.prohass.com.pe" target="_blank" rel="noopener" style="color:#1e8449;font-weight:600;text-decoration:none;">PROHASS</a> &nbsp;·&nbsp; <a href="https://www.peruberries.pe" target="_blank" rel="noopener" style="color:#1e8449;font-weight:600;text-decoration:none;">Perú Berries</a> &nbsp;·&nbsp; <a href="https://www.promperu.gob.pe" target="_blank" rel="noopener" style="color:#1e8449;font-weight:600;text-decoration:none;">PromPerú</a>
     </div>
   </section>
 
@@ -151,7 +151,7 @@ export const html = `
           <div class="lp-mp-info">📍 Virú, La Libertad · Valle costero · 18–24°C</div>
           <div class="lp-mp-info">📐 32 ha · Riego tecnificado · Global G.A.P.</div>
           <div class="lp-mp-info">📦 ~112 TM disponibles · Ago–Oct 2026</div>
-          <div class="lp-mp-score">⭐ Score Farmex: 760/1000 · Muy Bueno</div>
+          <div class="lp-mp-score">⭐ Score Productivo: 760/1000 · Muy Bueno</div>
           <button class="lp-mp-btn" onclick="showAuth('register')">Ver vitrina →</button>
         </div>
       </div>
@@ -165,7 +165,7 @@ export const html = `
           <div class="lp-mp-info">📍 Chincha, Ica · Costa árida · 20–28°C</div>
           <div class="lp-mp-info">📐 18 ha bajo malla · Biloxi · G.A.P. + Rainforest</div>
           <div class="lp-mp-info">📦 ~45 TM disponibles · Sep–Nov 2026</div>
-          <div class="lp-mp-score">⭐ Score Farmex: 810/1000 · Excelente</div>
+          <div class="lp-mp-score">⭐ Score Productivo: 810/1000 · Excelente</div>
           <button class="lp-mp-btn" onclick="showAuth('register')">Ver vitrina →</button>
         </div>
       </div>
@@ -177,9 +177,9 @@ export const html = `
         <div class="lp-mp-body">
           <div class="lp-mp-name">Finca Morales · Piura</div>
           <div class="lp-mp-info">📍 Tambogrande, Piura · Costa norte · 24–32°C</div>
-          <div class="lp-mp-info">📐 25 ha · Riego por goteo · SENASA Orgánico</div>
+          <div class="lp-mp-info">📐 25 ha · Riego por goteo · Global G.A.P.</div>
           <div class="lp-mp-info">📦 ~75 TM disponibles · Jul–Sep 2026</div>
-          <div class="lp-mp-score">⭐ Score Farmex: 740/1000 · Bueno</div>
+          <div class="lp-mp-score">⭐ Score Productivo: 740/1000 · Bueno</div>
           <button class="lp-mp-btn" onclick="showAuth('register')">Ver vitrina →</button>
         </div>
       </div>

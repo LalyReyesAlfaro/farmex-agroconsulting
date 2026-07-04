@@ -82,7 +82,7 @@ export const html = `
       <div class="srv-feat"><div class="sf-ico-s">🏡</div><div><div class="sf-n-s">Tenencia de tierra</div><div class="sf-d-s">Título, posesión, hectáreas</div></div></div>
       <div class="srv-feat"><div class="sf-ico-s">🌍</div><div><div class="sf-n-s">Vinculación comercial</div><div class="sf-d-s">Compradores, contratos, exportaciones</div></div></div>
     </div>
-    <button onclick="window.goScreen('scoring')" style="margin-top:12px;background:none;border:1.5px solid var(--ok);color:var(--ok);padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;">Ver mi Score Farmex AI →</button>
+    <button onclick="window.goScreen('scoring')" style="margin-top:12px;background:none;border:1.5px solid var(--ok);color:var(--ok);padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;">Ver mi Score Productivo →</button>
   </div>
 </div>
 
@@ -98,16 +98,16 @@ export const html = `
   <div class="srv-block-body">
     <div class="srv-specialist-grid">
       <div class="srv-specialist">
-        <div class="ssp-av" style="background:#E8F8EE;color:var(--g-mid);">JQ</div>
-        <div><div class="ssp-name">Ing. Juan Quispe</div><div class="ssp-rol">Especialista Palta Hass · La Libertad</div><div class="ssp-exp">12 años en campo</div></div>
+        <div class="ssp-av" style="background:#E8F8EE;color:var(--g-mid);">AG</div>
+        <div><div class="ssp-name">Agrónomo Senior</div><div class="ssp-rol">Atención a clientes · Generación de contenidos</div><div class="ssp-exp">Farmex Capital</div></div>
       </div>
       <div class="srv-specialist">
-        <div class="ssp-av" style="background:#E8F4FD;color:var(--info);">MR</div>
-        <div><div class="ssp-name">Ing. María Ramos</div><div class="ssp-rol">Especialista Arándano · Ica</div><div class="ssp-exp">8 años en campo</div></div>
+        <div class="ssp-av" style="background:#E8F4FD;color:var(--info);">CM</div>
+        <div><div class="ssp-name">Community Manager</div><div class="ssp-rol">Soporte digital · Comunicación con productores</div><div class="ssp-exp">Farmex Capital</div></div>
       </div>
       <div class="srv-specialist">
-        <div class="ssp-av" style="background:#FDF3DC;color:var(--gold);">CP</div>
-        <div><div class="ssp-name">Ing. Carlos Pérez</div><div class="ssp-rol">Especialista Palta · Piura</div><div class="ssp-exp">15 años en campo</div></div>
+        <div class="ssp-av" style="background:#FDF3DC;color:var(--gold);">GG</div>
+        <div><div class="ssp-name">Gerente General</div><div class="ssp-rol">Dirección estratégica · Relaciones institucionales</div><div class="ssp-exp">Farmex Capital</div></div>
       </div>
     </div>
   </div>
@@ -124,7 +124,7 @@ export const html = `
   </div>
   <div class="srv-block-body">
     <div style="padding:12px 16px;background:#FDEEEE;border-radius:8px;font-size:13px;color:#7d1f1f;line-height:1.6;">
-      Productores verificados con perfil completo: foto del cultivo, ubicación GPS, certificaciones Global G.A.P. y SENASA, historial productivo por campaña e Score Farmex AI. Compradores internacionales los encuentran y contactan directamente, sin intermediarios.
+      Productores verificados con perfil completo: foto del cultivo, ubicación GPS, certificaciones, historial productivo por campaña y Score Productivo. Compradores internacionales los encuentran y contactan directamente, sin intermediarios.
     </div>
     <button onclick="window.goScreen('vitrina')" style="margin-top:12px;background:none;border:1.5px solid #c0392b;color:#c0392b;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;">Ver mi vitrina de productor →</button>
   </div>
