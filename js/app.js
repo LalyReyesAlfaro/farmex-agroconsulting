@@ -7,7 +7,8 @@ import * as creditos   from './screens/creditos.js';
 import * as mercado    from './screens/mercado.js';
 import * as scoring    from './screens/scoring.js';
 import * as clima      from './screens/clima.js';
-import * as vitrina    from './screens/vitrina.js';
+import * as vitrina        from './screens/vitrina.js';
+import * as suscripciones from './screens/suscripciones.js';
 
 // ── SUPABASE SDK ─────────────────────────────────────────────────────────────
 const SB_URL = 'https://zvleepucmfpkedyxyeol.supabase.co';
@@ -78,7 +79,7 @@ window.fbDb = {
 };
 // ── FIN SUPABASE ─────────────────────────────────────────────────────────────
 
-const SCREENS = { login, encuesta, dashboard, servicios, parcelas, creditos, mercado, scoring, clima, vitrina };
+const SCREENS = { login, encuesta, dashboard, servicios, parcelas, creditos, mercado, scoring, clima, vitrina, suscripciones };
 
 const TITLES = {
   login:     ['Acceder al Portal',    'Ingresa o regístrate para continuar'],
@@ -88,7 +89,8 @@ const TITLES = {
   parcelas:  ['Mis Hectáreas',        '2 áreas activas · La Libertad · 32 ha en total'],
   creditos:  ['Créditos',             'Productos disponibles y simulador de crédito agrícola'],
   mercado:   ['Mercado',              'Precios en tiempo real y compradores activos'],
-  scoring:   ['Score Productivo',      'Indicador de capacidad productiva y confianza · 760 / 1000'],
+  scoring:        ['Score Productivo',      'Indicador de capacidad productiva y confianza · 760 / 1000'],
+  suscripciones:  ['Mi Suscripción',        'Estándar · acceso inmediato · Premium con Score ≥ Bueno'],
   clima:     ['Clima & Riesgos',      'La Libertad · Actualizado hace 2 horas'],
   vitrina:   ['Marketplace & Conexión Comercial', 'Comparte tu perfil verificado con compradores e importadores'],
 };

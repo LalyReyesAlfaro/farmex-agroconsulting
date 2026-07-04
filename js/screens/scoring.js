@@ -17,6 +17,11 @@ export const html = `
       <div class="sc-next-v">Excelente (800+)</div>
       <div class="sc-next-h">Cumple las recomendaciones técnicas pendientes para +25 pts</div>
     </div>
+    <div style="margin-top:14px;padding:11px 14px;background:linear-gradient(135deg,rgba(228,173,52,.18),rgba(228,173,52,.08));border:1px solid rgba(228,173,52,.35);border-radius:8px;text-align:center;">
+      <div style="font-size:10px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.8px;margin-bottom:3px;">⭐ Acceso Premium</div>
+      <div style="font-size:11px;color:rgba(255,255,255,.6);margin-bottom:9px;">Score Muy Bueno (760) · Calificación cumplida</div>
+      <button onclick="window.goScreen('suscripciones')" style="width:100%;background:var(--gold);color:#fff;border:none;padding:8px;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer;">Ver mi plan →</button>
+    </div>
   </div>
   <div class="sc-factors">
     <div style="font-size:14px;font-weight:700;color:var(--txt);margin-bottom:16px;">Criterios de evaluación</div>
