@@ -257,7 +257,7 @@ function mostrarResumen() {
     <div style="margin-top:8px;padding-top:8px;border-top:2px solid #27ae60;font-size:13px;font-weight:700;color:#1e8449;">
       Total a solicitar: S/ ${totPedido.toLocaleString('es-PE')} · Cuota mensual total: S/ ${totCuota.toLocaleString('es-PE')}
     </div>
-    <div style="margin-top:8px;font-size:11px;color:#888;">Tu solicitud quedó registrada y será revisada por el equipo de Farmex Capital.</div>
+    <div style="margin-top:8px;font-size:11px;color:#888;">Tu solicitud quedó registrada y será revisada por el equipo de Farmex AgroConsulting.</div>
   `;
   resumen.style.display = 'block';
 }

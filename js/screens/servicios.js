@@ -99,15 +99,15 @@ export const html = `
     <div class="srv-specialist-grid">
       <div class="srv-specialist">
         <div class="ssp-av" style="background:#E8F8EE;color:var(--g-mid);">AG</div>
-        <div><div class="ssp-name">Agrónomo Senior</div><div class="ssp-rol">Atención a clientes · Generación de contenidos</div><div class="ssp-exp">Farmex Capital</div></div>
+        <div><div class="ssp-name">Agrónomo Senior</div><div class="ssp-rol">Atención a clientes · Generación de contenidos</div><div class="ssp-exp">Farmex AgroConsulting</div></div>
       </div>
       <div class="srv-specialist">
         <div class="ssp-av" style="background:#E8F4FD;color:var(--info);">CM</div>
-        <div><div class="ssp-name">Community Manager</div><div class="ssp-rol">Soporte digital · Comunicación con productores</div><div class="ssp-exp">Farmex Capital</div></div>
+        <div><div class="ssp-name">Community Manager</div><div class="ssp-rol">Soporte digital · Comunicación con productores</div><div class="ssp-exp">Farmex AgroConsulting</div></div>
       </div>
       <div class="srv-specialist">
         <div class="ssp-av" style="background:#FDF3DC;color:var(--gold);">GG</div>
-        <div><div class="ssp-name">Gerente General</div><div class="ssp-rol">Dirección estratégica · Relaciones institucionales</div><div class="ssp-exp">Farmex Capital</div></div>
+        <div><div class="ssp-name">Gerente General</div><div class="ssp-rol">Dirección estratégica · Relaciones institucionales</div><div class="ssp-exp">Farmex AgroConsulting</div></div>
       </div>
     </div>
   </div>

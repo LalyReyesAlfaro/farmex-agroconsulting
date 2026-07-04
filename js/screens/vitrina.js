@@ -123,7 +123,7 @@ export const html = `
           <div class="hist-item"><span class="hist-yr">2026</span><div class="hist-bar-wrap"><div class="hist-bar" style="width:100%;background:var(--gold);"></div></div><span class="hist-tm" style="color:var(--gold);">~128 TM</span></div>
         </div>
         <button class="pub-cta">📩 Solicitar cotización a Raúl García</button>
-        <div class="pub-cta-sub">Verificado por Farmex Capital · Score 760/1000 · Responde en &lt;24h</div>
+        <div class="pub-cta-sub">Verificado por Farmex AgroConsulting · Score 760/1000 · Responde en &lt;24h</div>
       </div>
     </div>
   </div>

@@ -6,7 +6,7 @@ export const html = `
     <div class="lp-nb-brand">
       <div class="lp-nb-ico">FC</div>
       <div>
-        <div class="lp-nb-name">FARMEX CAPITAL</div>
+        <div class="lp-nb-name">FARMEX AGROCONSULTING</div>
         <div class="lp-nb-sub">El Portal de Productores · Perú</div>
       </div>
     </div>
@@ -56,9 +56,9 @@ export const html = `
   <!-- QUIÉNES SOMOS -->
   <section id="lp-quienes" class="lp-section lp-section-light">
     <div class="lp-section-header tc">
-      <div class="lp-stag">Sobre Farmex Capital</div>
+      <div class="lp-stag">Sobre Farmex AgroConsulting</div>
       <h2 class="lp-sh2">Quiénes somos</h2>
-      <p class="lp-sp">Farmex Capital es una solución integral de colaboración con pequeños y medianos agroexportadores de palta y arándano en la costa del Perú. Combinamos financiamiento directo, asistencia técnica en campo y evaluación productiva — actuando como certificador técnico del agricultor y su aval ante las instituciones financieras, promoviendo una agricultura sostenible y competitiva.</p>
+      <p class="lp-sp">Farmex AgroConsulting es una solución integral de colaboración con pequeños y medianos agroexportadores de palta y arándano en la costa del Perú. Combinamos financiamiento directo, asistencia técnica en campo y evaluación productiva — actuando como certificador técnico del agricultor y su aval ante las instituciones financieras, promoviendo una agricultura sostenible y competitiva.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:8px;">
       <div style="background:#fff;border-radius:12px;padding:20px 22px;border:1px solid #e5e9ef;box-shadow:0 2px 8px rgba(0,0,0,.05);">
@@ -213,7 +213,7 @@ export const html = `
   <footer class="lp-footer">
     <div class="lp-footer-inner">
       <div>
-        <div class="lp-footer-name">FARMEX CAPITAL</div>
+        <div class="lp-footer-name">FARMEX AGROCONSULTING</div>
         <div class="lp-footer-sub">El Portal de Productores · Perú 2026</div>
         <div class="lp-footer-desc">La infraestructura financiera para pequeños y medianos agroexportadores de la costa del Perú.</div>
       </div>
@@ -234,7 +234,7 @@ export const html = `
         <a href="#lp-contacto">Ancash</a>
       </div>
     </div>
-    <div class="lp-footer-copy">© 2026 Farmex Capital S.A.C. · Perú · Todos los derechos reservados</div>
+    <div class="lp-footer-copy">© 2026 Farmex AgroConsulting S.A.C. · Perú · Todos los derechos reservados</div>
   </footer>
 
 </div>
@@ -246,7 +246,7 @@ export const html = `
     <div class="lp-modal-logo">
       <div class="lp-auth-ico">FC</div>
       <div>
-        <div class="lp-auth-brand">FARMEX CAPITAL</div>
+        <div class="lp-auth-brand">FARMEX AGROCONSULTING</div>
         <div class="lp-auth-sub-txt">Portal del Productor</div>
       </div>
     </div>

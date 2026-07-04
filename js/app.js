@@ -85,7 +85,7 @@ const TITLES = {
   login:     ['Acceder al Portal',    'Ingresa o regístrate para continuar'],
   encuesta:  ['Mi Perfil',            'Raúl García Mendoza · La Libertad · 32 ha · Palta Hass'],
   dashboard: ['Mis Cultivos',          'Buenos días, Raúl — Campaña Palta Hass 2026 en curso'],
-  servicios: ['Nuestros Servicios',   'Quiénes somos y qué ofrecemos en Farmex Capital'],
+  servicios: ['Nuestros Servicios',   'Quiénes somos y qué ofrecemos en Farmex AgroConsulting'],
   parcelas:  ['Mis Hectáreas',        '2 áreas activas · La Libertad · 32 ha en total'],
   creditos:  ['Créditos',             'Productos disponibles y simulador de crédito agrícola'],
   mercado:   ['Mercado',              'Precios en tiempo real y compradores activos'],

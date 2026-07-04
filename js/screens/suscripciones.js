@@ -63,7 +63,7 @@ export const html = `
   <div style="display:flex;flex-direction:column;gap:10px;">
     <div style="display:flex;gap:12px;align-items:flex-start;">
       <div style="min-width:24px;height:24px;background:var(--ok);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;">1</div>
-      <div style="font-size:12px;color:var(--txt-s);"><strong>Score Productivo ≥ Bueno (600 pts)</strong> — evaluado por el equipo agronómico de Farmex Capital en campo y con datos satelitales.</div>
+      <div style="font-size:12px;color:var(--txt-s);"><strong>Score Productivo ≥ Bueno (600 pts)</strong> — evaluado por el equipo agronómico de Farmex AgroConsulting en campo y con datos satelitales.</div>
     </div>
     <div style="display:flex;gap:12px;align-items:flex-start;">
       <div style="min-width:24px;height:24px;background:var(--ok);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;">2</div>
@@ -86,7 +86,7 @@ export function init() {
   if (apto) {
     el.innerHTML = `
       <div style="background:#E8F8EE;border-radius:7px;padding:8px 10px;margin-bottom:8px;font-size:11px;color:var(--ok);font-weight:700;text-align:center;">✅ Score ${score} (${cat}) · Calificación cumplida</div>
-      <button onclick="alert('Tu solicitud de acceso Premium ha sido registrada. El equipo de Farmex Capital revisará tu perfil en los próximos 5 días hábiles.')" style="width:100%;background:var(--gold);color:#fff;border:none;padding:10px;border-radius:7px;font-size:13px;font-weight:700;cursor:pointer;">Solicitar acceso Premium →</button>`;
+      <button onclick="alert('Tu solicitud de acceso Premium ha sido registrada. El equipo de Farmex AgroConsulting revisará tu perfil en los próximos 5 días hábiles.')" style="width:100%;background:var(--gold);color:#fff;border:none;padding:10px;border-radius:7px;font-size:13px;font-weight:700;cursor:pointer;">Solicitar acceso Premium →</button>`;
   } else {
     el.innerHTML = `
       <div style="background:#FEF9E7;border-radius:7px;padding:8px 10px;font-size:11px;color:var(--gold);text-align:center;">⏳ Score ${score} (${cat}) · Necesitas ${600 - score} pts más para calificar</div>`;

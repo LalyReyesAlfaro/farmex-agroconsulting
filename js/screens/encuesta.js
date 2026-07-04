@@ -98,7 +98,7 @@ export const html = `
         <div style="display:flex;align-items:center;gap:10px;">
           <span style="font-size:18px;">📋</span>
           <div>
-            <div style="font-size:13px;font-weight:700;color:#fff;">Encuesta de Validación · Farmex Capital</div>
+            <div style="font-size:13px;font-weight:700;color:#fff;">Encuesta de Validación · Farmex AgroConsulting</div>
             <div style="font-size:11px;color:rgba(255,255,255,.5);">Valida nuestra propuesta · 5 minutos</div>
           </div>
         </div>
