@@ -1,13 +1,13 @@
 const RATES = {
-  palta:    { fertilizacion:[4500,1.8], 'campaña':[12000,1.6], riego:[8000,1.5], postcosecha:[6500,1.9], fitosanitario:[3500,1.7], bioestimulacion:[2800,1.8] },
-  arandano: { fertilizacion:[5500,1.8], 'campaña':[15000,1.6], riego:[10000,1.5], postcosecha:[8000,1.9], fitosanitario:[4200,1.7], bioestimulacion:[3500,1.8] }
+  palta:    { fertilizacion:[4500,1.8], 'campaña':[12000,1.6], tecnificacion:[8000,1.5], postcosecha:[6500,1.9], fitosanitario:[3500,1.7], bioestimulacion:[2800,1.8] },
+  arandano: { fertilizacion:[5500,1.8], 'campaña':[15000,1.6], tecnificacion:[10000,1.5], postcosecha:[8000,1.9], fitosanitario:[4200,1.7], bioestimulacion:[3500,1.8] }
 };
 
 const CULT_LABELS = { palta: 'Palta Hass', arandano: 'Arándano' };
 const TIPO_LABELS = {
   fertilizacion:   'Crédito Fertilización',
   'campaña':       'Crédito Campaña',
-  riego:           'Crédito Riego',
+  tecnificacion:   'Crédito Tecnificación',
   postcosecha:     'Crédito Postcosecha',
   fitosanitario:   'Crédito Control Fitosanitario',
   bioestimulacion: 'Crédito Control de Bioestimulación',
@@ -17,12 +17,90 @@ const PLAZOS = [6, 8, 12, 18, 24, 36];
 export const html = `
 <div class="stitle">💰 Productos de Financiamiento</div>
 <div class="prod-grid">
-  <div class="prod"><div class="prod-stg">Etapa 1 · Feb–Abr</div><div class="prod-n">Crédito Fertilización</div><div class="prod-d">Fertilizantes foliares, correctores de suelo y micronutrientes en floración. Decisivo para el calibre final.</div><div class="prod-m">Hasta S/ 4,500 / ha</div><div class="prod-p">8 meses · desde 1.8% mensual</div><div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">🌱 Proveedor: <a href="https://www.farmexperu.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">Farmex Perú – Insumos y fertilizantes agrícolas</a></div></div>
-  <div class="prod"><div class="prod-stg">Etapa 2 · May–Jul</div><div class="prod-n">Crédito Campaña</div><div class="prod-d">Capital para mano de obra, empaques, supervisión técnica y costos operativos de la temporada completa. Otorgado en alianza con instituciones financieras de la zona.</div><div class="prod-m">Hasta S/ 12,000 / ha</div><div class="prod-p">12 meses · desde 1.6% mensual</div><div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">🏦 Financiado con: <a href="https://www.banbif.com.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">BanBif – Banco Interamericano de Finanzas</a></div></div>
-  <div class="prod"><div class="prod-stg">Etapa 3 · Todo el ciclo</div><div class="prod-n">Crédito Riego</div><div class="prod-d">Sistemas de riego tecnificado, goteo por presión e infraestructura hídrica para optimizar el agua.</div><div class="prod-m">Hasta S/ 8,000 / ha</div><div class="prod-p">18 meses · desde 1.5% mensual</div><div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">💧 Proveedor: <a href="https://www.quimtia.com.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">QUIMTIA PERÚ – Soluciones de riego y agroquímicos</a></div></div>
-  <div class="prod"><div class="prod-stg">Etapa 4 · Ago–Oct</div><div class="prod-n">Crédito Postcosecha</div><div class="prod-d">Empaque, cámaras de frío, certificaciones fitosanitarias y transporte hasta el puerto de embarque. Otorgado en alianza con instituciones financieras de la zona.</div><div class="prod-m">Hasta S/ 6,500 / ha</div><div class="prod-p">6 meses · desde 1.9% mensual</div><div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">🏦 Financiado con: <a href="https://www.banbif.com.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">BanBif – Banco Interamericano de Finanzas</a></div></div>
-  <div class="prod"><div class="prod-stg">Sanidad · Todo el ciclo</div><div class="prod-n">Crédito Control Fitosanitario</div><div class="prod-d">Agroquímicos especializados para el control de Stenoma catenifer, mosca de la fruta, trips y antracnosis: Spinosad, Bacillus thuringiensis, Metalaxil, Oxicloruro de Cobre, Cyprodinil + Fludioxonil y Azufre.</div><div class="prod-m">Hasta S/ 3,500 / ha</div><div class="prod-p">8 meses · desde 1.7% mensual</div><div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">🌱 Productos: <a href="https://www.farmexperu.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">Farmex Perú – Catálogo de productos fitosanitarios</a></div></div>
-  <div class="prod"><div class="prod-stg">Productividad · Cuaje a Envero</div><div class="prod-n">Crédito Control de Bioestimulación</div><div class="prod-d">Bioestimulantes de última generación: Biozyme TF, Agrispon, Biostim, Fertimar y H-Top. 3 aplicaciones durante el crecimiento del fruto. Incremento comprobado de rendimiento de hasta +84% t/ha.</div><div class="prod-m">Hasta S/ 2,800 / ha</div><div class="prod-p">6 meses · desde 1.8% mensual</div><div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">🌱 Productos: <a href="https://www.farmexperu.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">Farmex Perú – Catálogo de bioestimulantes</a></div></div>
+
+  <div class="prod">
+    <div class="prod-stg">Etapa 1 · Feb–Abr</div>
+    <div class="prod-n">Crédito Fertilización</div>
+    <div class="prod-d">Fertilizantes foliares, correctores de suelo y micronutrientes en floración. Decisivo para el calibre final.</div>
+    <div class="prod-m">Hasta S/ 4,500 / ha</div>
+    <div class="prod-p">8 meses · desde 1.8% mensual</div>
+    <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">🌱 <a href="https://www.farmexperu.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">Farmex Perú – Fertilizantes e insumos agrícolas</a></div>
+    <button onclick="var d=this.nextElementSibling;d.style.display=d.style.display==='block'?'none':'block';this.textContent=d.style.display==='block'?'▾ Ocultar catálogo':'▸ Ver catálogo'" style="width:100%;background:none;border:1px solid #c8e6c9;color:#27ae60;font-size:11px;font-weight:600;cursor:pointer;padding:5px 8px;border-radius:5px;margin-top:7px;text-align:left;">▸ Ver catálogo</button>
+    <div style="display:none;margin-top:6px;padding:9px 10px;background:#f0faf3;border-radius:6px;font-size:11px;color:#555;line-height:1.7;">
+      <div style="font-weight:700;color:#1e6e3a;margin-bottom:4px;">📦 Catálogo Farmex Perú</div>
+      <div><strong>Foliares:</strong> Kamab 26 · Pharmamin · MAXI frut · KYT-GREEN · FERTIKAM · FX-31 · AminoQuelant-CA · AMINOQUELANT-K LOW PH · AminoQuelant-Minors</div>
+      <div style="margin-top:3px;"><strong>Correctores & soporte:</strong> Powerfol Calcio · Powerfol Phos · Powerfol Potasio · FISIOSTRESS FISIOLÓGICO</div>
+    </div>
+  </div>
+
+  <div class="prod">
+    <div class="prod-stg">Etapa 2 · May–Jul</div>
+    <div class="prod-n">Crédito Campaña</div>
+    <div class="prod-d">Capital para mano de obra, empaques, supervisión técnica y costos operativos de la temporada completa. Otorgado en alianza con instituciones financieras de la zona.</div>
+    <div class="prod-m">Hasta S/ 12,000 / ha</div>
+    <div class="prod-p">12 meses · desde 1.6% mensual</div>
+    <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">🏦 <a href="https://www.banbif.com.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">BanBif – Banco Interamericano de Finanzas</a></div>
+  </div>
+
+  <div class="prod">
+    <div class="prod-stg">Etapa 3 · Todo el ciclo</div>
+    <div class="prod-n">Crédito Tecnificación</div>
+    <div class="prod-d">Sistemas de riego tecnificado, goteo por presión, infraestructura hídrica, tratamiento de agua y energía solar para bombeo. Optimiza el recurso hídrico en toda la campaña.</div>
+    <div class="prod-m">Hasta S/ 8,000 / ha</div>
+    <div class="prod-p">18 meses · desde 1.5% mensual</div>
+    <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">💧 <a href="https://www.quimtia.com.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">QUIMTIA PERÚ – Soluciones de riego tecnificado</a></div>
+    <button onclick="var d=this.nextElementSibling;d.style.display=d.style.display==='block'?'none':'block';this.textContent=d.style.display==='block'?'▾ Ocultar catálogo':'▸ Ver catálogo'" style="width:100%;background:none;border:1px solid #c8e6c9;color:#27ae60;font-size:11px;font-weight:600;cursor:pointer;padding:5px 8px;border-radius:5px;margin-top:7px;text-align:left;">▸ Ver catálogo</button>
+    <div style="display:none;margin-top:6px;padding:9px 10px;background:#f0faf3;border-radius:6px;font-size:11px;color:#555;line-height:1.7;">
+      <div style="font-weight:700;color:#1e6e3a;margin-bottom:4px;">📦 Catálogo QUIMTIA – Red Agrícola</div>
+      <div><strong>Clarificación:</strong> Floculante XentriQ · Coagulante Chemlok · Carbón activado</div>
+      <div style="margin-top:3px;"><strong>Osmosis inversa:</strong> Anti-incrustante+Dispersante XentriQ · Filtros PP</div>
+      <div style="margin-top:3px;"><strong>Limpieza de riego:</strong> Delta 5% SC · Alfar 10 PM · Alfamatrix 10 EC · Carvadin 5% DP</div>
+      <div style="margin-top:3px;"><strong>Sanidad ambiental:</strong> Bactericida+Fungicida Chemlok 31420</div>
+      <div style="margin-top:3px;"><strong>Energía solar:</strong> Sistemas de bombeo solar Greendipity (paneles + motobomba)</div>
+    </div>
+  </div>
+
+  <div class="prod">
+    <div class="prod-stg">Etapa 4 · Ago–Oct</div>
+    <div class="prod-n">Crédito Postcosecha</div>
+    <div class="prod-d">Empaque, cámaras de frío, certificaciones fitosanitarias y transporte hasta el puerto de embarque. Otorgado en alianza con instituciones financieras de la zona.</div>
+    <div class="prod-m">Hasta S/ 6,500 / ha</div>
+    <div class="prod-p">6 meses · desde 1.9% mensual</div>
+    <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">🏦 <a href="https://www.banbif.com.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">BanBif – Banco Interamericano de Finanzas</a></div>
+  </div>
+
+  <div class="prod">
+    <div class="prod-stg">Sanidad · Todo el ciclo</div>
+    <div class="prod-n">Crédito Control Fitosanitario</div>
+    <div class="prod-d">Agroquímicos especializados para el control de Stenoma catenifer, mosca de la fruta, trips y antracnosis.</div>
+    <div class="prod-m">Hasta S/ 3,500 / ha</div>
+    <div class="prod-p">8 meses · desde 1.7% mensual</div>
+    <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">🌱 <a href="https://www.farmexperu.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">Farmex Perú – Catálogo de protección</a></div>
+    <button onclick="var d=this.nextElementSibling;d.style.display=d.style.display==='block'?'none':'block';this.textContent=d.style.display==='block'?'▾ Ocultar catálogo':'▸ Ver catálogo'" style="width:100%;background:none;border:1px solid #c8e6c9;color:#27ae60;font-size:11px;font-weight:600;cursor:pointer;padding:5px 8px;border-radius:5px;margin-top:7px;text-align:left;">▸ Ver catálogo</button>
+    <div style="display:none;margin-top:6px;padding:9px 10px;background:#f0faf3;border-radius:6px;font-size:11px;color:#555;line-height:1.7;">
+      <div style="font-weight:700;color:#1e6e3a;margin-bottom:4px;">📦 Catálogo Farmex Perú – Protección</div>
+      <div><strong>Fungicidas:</strong> Golden 40 EC · Botrimex · Novak 50 WP · Tribut · Aviate 75 WG · Azobin Top · Meteor · Orchestra · Orión 25 EW · Azobin · Benlate · Cougar · Cosavet DF · Roxicop · Totem</div>
+      <div style="margin-top:3px;"><strong>Otras categorías:</strong> Insecticidas · Herbicidas · Acaricidas · Nematicida</div>
+    </div>
+  </div>
+
+  <div class="prod">
+    <div class="prod-stg">Productividad · Cuaje a Envero</div>
+    <div class="prod-n">Crédito Control de Bioestimulación</div>
+    <div class="prod-d">Bioestimulantes y reguladores de última generación para 3 aplicaciones clave durante el crecimiento del fruto. Incremento comprobado de rendimiento hasta +84% t/ha.</div>
+    <div class="prod-m">Hasta S/ 2,800 / ha</div>
+    <div class="prod-p">6 meses · desde 1.8% mensual</div>
+    <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">🌱 <a href="https://www.farmexperu.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">Farmex Perú – Catálogo de especialidades</a></div>
+    <button onclick="var d=this.nextElementSibling;d.style.display=d.style.display==='block'?'none':'block';this.textContent=d.style.display==='block'?'▾ Ocultar catálogo':'▸ Ver catálogo'" style="width:100%;background:none;border:1px solid #c8e6c9;color:#27ae60;font-size:11px;font-weight:600;cursor:pointer;padding:5px 8px;border-radius:5px;margin-top:7px;text-align:left;">▸ Ver catálogo</button>
+    <div style="display:none;margin-top:6px;padding:9px 10px;background:#f0faf3;border-radius:6px;font-size:11px;color:#555;line-height:1.7;">
+      <div style="font-weight:700;color:#1e6e3a;margin-bottom:4px;">📦 Catálogo Farmex Perú – Especialidades</div>
+      <div><strong>Bioestimulantes:</strong> MAXBIO ALGAE-L · Maxbio Algae · Powergizer · Terra-Sorb Foliar · Terra-Sorb Radicular</div>
+      <div style="margin-top:3px;"><strong>Reguladores de crecimiento:</strong> Ryamex 4% SL · Optimus</div>
+      <div style="margin-top:3px;"><strong>Inductores:</strong> Armurox · Phytness</div>
+      <div style="margin-top:3px;"><strong>Coadyuvantes & atrayentes:</strong> Sulphomex · Exilis · Powerfol Potasio · Powerfol Phos</div>
+    </div>
+  </div>
+
 </div>
 <div class="stitle">🧮 Simulador de Crédito</div>
 <div style="font-size:12px;color:var(--txt-m);margin:-10px 0 14px;">Puedes simular el crédito de más de un cultivo a la vez y ver el total combinado.</div>

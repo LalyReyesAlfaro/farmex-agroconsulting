@@ -148,7 +148,7 @@ export const html = `
       <div class="dash-task normal">
         <div class="dt-ico">💳</div>
         <div class="dt-body">
-          <div class="dt-title">Cuota de Crédito Riego</div>
+          <div class="dt-title">Cuota de Crédito Tecnificación</div>
           <div class="dt-desc">S/ 1,840 · Vence en 12 días · Pago automático activo</div>
         </div>
       </div>
