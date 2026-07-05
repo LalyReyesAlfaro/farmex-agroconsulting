@@ -178,7 +178,7 @@ export const html = `
       </div>
       <div class="lp-mp-card">
         <div class="lp-mp-img-wrap">
-          <img src="https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?w=500&q=80" alt="Palta Piura" class="lp-mp-img">
+          <img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=500&q=80" alt="Palta Piura" class="lp-mp-img">
           <div class="lp-mp-badge">🥑 Palta</div>
         </div>
         <div class="lp-mp-body">
