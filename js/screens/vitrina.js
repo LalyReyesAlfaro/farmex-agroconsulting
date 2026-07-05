@@ -95,7 +95,7 @@ export const html = `
             </div>
           </div>
           <div class="pub-crop" style="border-left-color:var(--info);">
-            <img src="https://images.unsplash.com/photo-1425007680966-1ac71ad1b87d?w=400&q=80" alt="Arándano" style="width:100%;height:110px;object-fit:cover;border-radius:6px;margin-bottom:10px;">
+            <img src="https://images.unsplash.com/photo-1498557850523-fd3d118b962e?w=400&q=80" alt="Arándano" style="width:100%;height:110px;object-fit:cover;border-radius:6px;margin-bottom:10px;">
             <div class="pub-crop-name">🫐 Arándano</div>
             <div class="pub-crop-ha">4 ha · Nueva plantación 2026</div>
             <div class="pub-crop-stats">
