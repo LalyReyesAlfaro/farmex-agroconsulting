@@ -1,6 +1,11 @@
 export const html = `
 <div class="stitle">🌤️ Clima y Riesgos · La Libertad</div>
 
+<div style="background:linear-gradient(135deg,#E8F4FD,#EBF5FB);border:1px solid rgba(41,128,185,.2);border-radius:8px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+  <span style="font-size:18px;">📡</span>
+  <div style="font-size:11px;color:#1a4c7e;line-height:1.6;flex:1;"><strong>Datos satelitales en tiempo real</strong> — Farmex AgroConsulting suscribe mensualmente a un proveedor especializado de datos satelitales agrícolas para monitoreo continuo de NDVI, índices de humedad y riesgos climáticos en las 5 regiones productoras clave del Perú.</div>
+</div>
+
 <!-- Pronóstico -->
 <div class="wth-grid">
   <div class="wth"><div class="wth-day">Hoy</div><div class="wth-ico">⛅</div><div class="wth-t">22°C</div><div class="wth-d">Parcialmente nublado</div></div>

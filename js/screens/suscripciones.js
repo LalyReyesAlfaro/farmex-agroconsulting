@@ -19,10 +19,10 @@ export const html = `
     <div style="text-align:center;margin-bottom:14px;">
       <div style="font-size:28px;margin-bottom:6px;">🌱</div>
       <div style="font-size:17px;font-weight:800;color:var(--txt);">Estándar</div>
-      <div style="font-size:22px;font-weight:800;color:var(--ok);margin:6px 0 2px;">Gratuito</div>
-      <div style="font-size:11px;color:var(--txt-m);">Para productores calificados</div>
+      <div style="font-size:22px;font-weight:800;color:var(--ok);margin:6px 0 2px;">$12 <span style="font-size:14px;font-weight:600;">/ mes</span></div>
+      <div style="font-size:11px;color:var(--txt-m);">S/ 45 / mes · Acceso a la plataforma</div>
     </div>
-    <div style="background:#E8F8EE;border-radius:7px;padding:6px 10px;text-align:center;font-size:11px;font-weight:700;color:var(--ok);margin-bottom:14px;">✅ Acceso inmediato al registrarse</div>
+    <div style="background:#E8F8EE;border-radius:7px;padding:6px 10px;text-align:center;font-size:11px;font-weight:700;color:var(--ok);margin-bottom:14px;">✅ Activación inmediata al registrarse</div>
     <div style="flex:1;display:flex;flex-direction:column;gap:8px;font-size:12px;color:var(--txt-s);">
       <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--ok);font-weight:700;">✓</span><span>Asistencia técnica digital con agrónomos especializados</span></div>
       <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:var(--ok);font-weight:700;">✓</span><span>Climatología y alertas semanales por región</span></div>
@@ -41,8 +41,8 @@ export const html = `
     <div style="text-align:center;margin-bottom:14px;">
       <div style="font-size:28px;margin-bottom:6px;">⭐</div>
       <div style="font-size:17px;font-weight:800;color:var(--txt);">Premium</div>
-      <div style="font-size:13px;font-weight:700;color:var(--gold);margin:6px 0 2px;">Por calificación productiva</div>
-      <div style="font-size:11px;color:var(--txt-m);">Sin costo adicional</div>
+      <div style="font-size:22px;font-weight:800;color:var(--gold);margin:6px 0 2px;">$45 <span style="font-size:14px;font-weight:600;">/ mes</span></div>
+      <div style="font-size:11px;color:var(--txt-m);">S/ 169 / mes · Score ≥ Bueno requerido</div>
     </div>
     <div style="background:#FDF3DC;border-radius:7px;padding:6px 10px;text-align:center;font-size:11px;font-weight:700;color:var(--gold);margin-bottom:14px;">⭐ Score ≥ Bueno (600+) + 1 año activo</div>
     <div style="flex:1;display:flex;flex-direction:column;gap:8px;font-size:12px;color:var(--txt-s);">

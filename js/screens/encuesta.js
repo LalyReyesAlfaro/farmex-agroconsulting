@@ -39,7 +39,9 @@ export const html = `
       <div class="perfil-datos">
         <div class="pd-row"><span>Total hectáreas</span><strong>32 ha propias</strong></div>
         <div class="pd-row"><span>Palta Hass</span><strong>28 ha · 2 campos</strong></div>
+        <div class="pd-row"><span>Producción Palta 2025</span><strong>~107 TM · 3.8 TM/ha promedio</strong></div>
         <div class="pd-row"><span>Arándano Biloxi</span><strong>4 ha · nueva plantación</strong></div>
+        <div class="pd-row"><span>Producción Arándano 2026</span><strong>Primera cosecha · ~12 TM estimadas</strong></div>
         <div class="pd-row"><span>Sistema de riego</span><strong>Goteo tecnificado + fertirriego</strong></div>
         <div class="pd-row"><span>Tenencia</span><strong>Título de propiedad registrado</strong></div>
         <div class="pd-row"><span>Altitud media</span><strong>180–220 msnm</strong></div>
@@ -64,6 +66,73 @@ export const html = `
         <div class="hist-row"><span class="hr-yr">2025</span><div class="hr-bar-w"><div class="hr-bar" style="width:94%"></div></div><span class="hr-tm">107 TM</span></div>
         <div class="hist-row"><span class="hr-yr">2026</span><div class="hr-bar-w"><div class="hr-bar" style="width:100%;background:var(--gold);"></div></div><span class="hr-tm" style="color:var(--gold);">~128 TM</span></div>
       </div>
+    </div>
+
+    <!-- Seguimiento mensual del ciclo productivo -->
+    <div class="card" style="margin-top:14px;">
+      <div class="ch"><div><div class="ct">📅 Seguimiento Mensual · Ciclo 2026</div><div class="cs">Completado por el productor · Verificado por Farmex AgroConsulting</div></div><span class="badge by">Jul 2026</span></div>
+      <div style="font-size:11px;color:var(--txt-m);margin-bottom:10px;padding-bottom:8px;border-bottom:1px dashed var(--border);">Registra las actividades mensuales de tu ciclo productivo. Farmex AgroConsulting verifica cada entrada y actualiza tu Score Productivo.</div>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:11px;">
+          <thead>
+            <tr style="background:var(--bg);text-align:left;">
+              <th style="padding:6px 8px;color:var(--txt-m);font-weight:600;white-space:nowrap;">Mes</th>
+              <th style="padding:6px 8px;color:var(--txt-m);font-weight:600;">Actividad registrada</th>
+              <th style="padding:6px 8px;color:var(--txt-m);font-weight:600;">Cultivo</th>
+              <th style="padding:6px 8px;color:var(--txt-m);font-weight:600;white-space:nowrap;">Verificado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:6px 8px;font-weight:600;color:var(--txt);white-space:nowrap;">Feb 2026</td>
+              <td style="padding:6px 8px;color:var(--txt-s);">Fertilización base · 1ª aplicación foliar</td>
+              <td style="padding:6px 8px;color:var(--txt-s);">🥑 Palta</td>
+              <td style="padding:6px 8px;"><span style="background:#E8F8EE;color:var(--ok);font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;">✓ Farmex</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:6px 8px;font-weight:600;color:var(--txt);white-space:nowrap;">Mar 2026</td>
+              <td style="padding:6px 8px;color:var(--txt-s);">Aplicación bioestimulante · manejo hídrico</td>
+              <td style="padding:6px 8px;color:var(--txt-s);">🥑 Palta</td>
+              <td style="padding:6px 8px;"><span style="background:#E8F8EE;color:var(--ok);font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;">✓ Farmex</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:6px 8px;font-weight:600;color:var(--txt);white-space:nowrap;">Abr 2026</td>
+              <td style="padding:6px 8px;color:var(--txt-s);">Control fitosanitario · cuajado de fruto</td>
+              <td style="padding:6px 8px;color:var(--txt-s);">🥑 Palta</td>
+              <td style="padding:6px 8px;"><span style="background:#E8F8EE;color:var(--ok);font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;">✓ Farmex</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:6px 8px;font-weight:600;color:var(--txt);white-space:nowrap;">May 2026</td>
+              <td style="padding:6px 8px;color:var(--txt-s);">Plantación arándano · preparación suelo</td>
+              <td style="padding:6px 8px;color:var(--txt-s);">🫐 Arándano</td>
+              <td style="padding:6px 8px;"><span style="background:#E8F8EE;color:var(--ok);font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;">✓ Farmex</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:6px 8px;font-weight:600;color:var(--txt);white-space:nowrap;">Jun 2026</td>
+              <td style="padding:6px 8px;color:var(--txt-s);">Engorde de fruto · 2ª fertilización</td>
+              <td style="padding:6px 8px;color:var(--txt-s);">🥑 Palta</td>
+              <td style="padding:6px 8px;"><span style="background:#E8F8EE;color:var(--ok);font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;">✓ Farmex</span></td>
+            </tr>
+            <tr style="background:rgba(228,173,52,.07);">
+              <td style="padding:6px 8px;font-weight:700;color:var(--gold);white-space:nowrap;">Jul 2026</td>
+              <td style="padding:6px 8px;color:var(--txt-s);">Monitoreo cosecha · control de calidad</td>
+              <td style="padding:6px 8px;color:var(--txt-s);">🥑 Palta</td>
+              <td style="padding:6px 8px;"><span style="background:#FDF3DC;color:var(--gold);font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;">⏳ Pendiente</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button onclick="alert('Registro mensual guardado. Farmex AgroConsulting lo verificará en los próximos 3 días hábiles.')" style="margin-top:10px;width:100%;background:none;border:1.5px solid var(--ok);color:var(--ok);padding:8px;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;">+ Registrar actividad de este mes →</button>
+    </div>
+
+    <!-- Alerta Palta Hass 2026 -->
+    <div class="card" style="margin-top:14px;border-left:3px solid #e74c3c;">
+      <div class="ch"><div><div class="ct" style="color:#c0392b;">⚠️ Alerta Campaña Palta Hass 2026</div><div class="cs">Condiciones críticas detectadas · La Libertad</div></div><span class="badge br">URGENTE</span></div>
+      <div style="font-size:12px;color:var(--txt-s);line-height:1.6;margin-bottom:8px;"><strong>Lluvias en etapa de engorde (Jun–Jul)</strong> — Probabilidad del 68% de precipitaciones moderadas en los próximos 10 días. Riesgo de antracnosis y pudrición del pedúnculo.</div>
+      <div style="background:#FDEEEE;border-radius:7px;padding:8px 12px;font-size:11px;color:#7d1f1f;line-height:1.6;">
+        💊 <strong>Acción recomendada:</strong> Suspender riego inmediatamente. Aplicar fosfonato de potasio preventivo. Revisar drenaje en surcos. Monitorear síntomas en cuello de raíz. Contacta a tu agrónomo Farmex AgroConsulting.
+      </div>
+      <button onclick="alert('Alerta registrada. Tu agrónomo Farmex AgroConsulting te contactará en menos de 24 horas con el protocolo de respuesta para tu finca.')" style="margin-top:8px;width:100%;background:#c0392b;color:#fff;border:none;padding:8px;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;">Contactar agrónomo ahora →</button>
     </div>
 
   </div>

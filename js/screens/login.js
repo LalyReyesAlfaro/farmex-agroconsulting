@@ -33,14 +33,11 @@ export const html = `
     <div class="lp-hero-bg"></div>
     <div class="lp-hero-grid"></div>
     <div class="lp-hero-inner">
-      <div class="lp-eyebrow"><span class="lp-pulse"></span>AgriFintech · Perú 2026</div>
+      <div class="lp-eyebrow"><span class="lp-pulse"></span>Ecosistema Digital Agrícola · Perú 2026</div>
       <h1 class="lp-h1">Convertimos ciclos <em>agrícolas</em><br>en flujo de caja predecible</h1>
-      <p class="lp-sub">La infraestructura financiera especializada para pequeños y medianos agroexportadores de palta y arándano en la costa del Perú. Porque el productor piensa por ciclos, no por trimestres.</p>
-      <div class="lp-hero-chips">
-        <span class="lp-chip">🥑 Palta Hass</span>
-        <span class="lp-chip">🫐 Arándano</span>
-        <span class="lp-chip">📍 5 regiones costeras</span>
-        <span class="lp-chip">⭐ Scoring Agrícola IA</span>
+      <p class="lp-sub">El ecosistema que transforma la información del campo en confianza y oportunidades de crecimiento para el agricultor peruano.</p>
+      <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:10px 16px;font-size:12px;color:rgba(255,255,255,.9);line-height:2.1;margin-bottom:18px;">
+        Asistencia técnica especializada &nbsp;•&nbsp; Aval técnico ante entidades financieras &nbsp;•&nbsp; Score productivo &nbsp;•&nbsp; Marketplace &nbsp;•&nbsp; Acceso al crédito &nbsp;•&nbsp; Inteligencia de datos
       </div>
       <div class="lp-hero-btns">
         <button class="lp-cta-primary" onclick="showAuth('register')">Quiero financiamiento →</button>
@@ -58,23 +55,33 @@ export const html = `
     <div class="lp-section-header tc">
       <div class="lp-stag">Sobre Farmex AgroConsulting</div>
       <h2 class="lp-sh2">Quiénes somos</h2>
-      <p class="lp-sp">Farmex AgroConsulting es una solución integral de colaboración con pequeños y medianos agroexportadores de palta y arándano en la costa del Perú. Combinamos financiamiento directo, asistencia técnica en campo y evaluación productiva — actuando como certificador técnico del agricultor y su aval ante las instituciones financieras, promoviendo una agricultura sostenible y competitiva.</p>
+      <p class="lp-sp">Farmex Agroconsulting es un ecosistema digital (Web + App móvil) que acompaña al pequeño y mediano productor durante todo el ciclo productivo de su cultivo, integrando asesoría técnica, gestión de información, score productivo, conexión comercial y actúa como aval técnico ante entidades financieras, transformando la información del campo en confianza y nuevas oportunidades de crecimiento.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:8px;">
       <div style="background:#fff;border-radius:12px;padding:20px 22px;border:1px solid #e5e9ef;box-shadow:0 2px 8px rgba(0,0,0,.05);">
         <div style="font-size:26px;margin-bottom:8px;">🎯</div>
         <div style="font-size:14px;font-weight:700;color:#1a2e1a;margin-bottom:6px;">Nuestra misión</div>
-        <p style="font-size:13px;color:#555;line-height:1.7;margin:0;">Ser la solución integral que acompaña al agricultor peruano: financiamos su campaña, evaluamos su capacidad productiva y actuamos como su certificador y aval técnico ante las instituciones financieras — para que acceda al crédito que necesita, cuando lo necesita.</p>
+        <p style="font-size:13px;color:#555;line-height:1.7;margin:0;">Ser el ecosistema digital que transforma la información del campo en confianza y oportunidades de crecimiento para el agricultor peruano. Integramos conocimiento técnico, información digital, score productivo, conexión comercial y certificación de datos para ayudar al productor a producir mejor, vender mejor y crecer de forma sostenible.</p>
       </div>
       <div style="background:#fff;border-radius:12px;padding:20px 22px;border:1px solid #e5e9ef;box-shadow:0 2px 8px rgba(0,0,0,.05);">
         <div style="font-size:26px;margin-bottom:8px;">👥</div>
         <div style="font-size:14px;font-weight:700;color:#1a2e1a;margin-bottom:6px;">Nuestro equipo</div>
-        <p style="font-size:13px;color:#555;line-height:1.7;margin:0;">Ingenieros agrónomos especializados en palta Hass y arándano con profundo conocimiento del mercado local y más de 10 años en campo. Respaldados por analistas financieros agroespecializados. Conocemos el cultivo porque hemos estado en él.</p>
+        <p style="font-size:13px;color:#555;line-height:1.7;margin:0;">Ingenieros agrónomos especializados en palta Hass y arándano con profundo conocimiento del mercado local y más de 10 años en campo. Community Manager para soporte digital y comunicación continua. Gerente General con visión estratégica y relaciones institucionales en el sector agroexportador peruano.</p>
       </div>
       <div style="background:#fff;border-radius:12px;padding:20px 22px;border:1px solid #e5e9ef;box-shadow:0 2px 8px rgba(0,0,0,.05);">
         <div style="font-size:26px;margin-bottom:8px;">🌿</div>
         <div style="font-size:14px;font-weight:700;color:#1a2e1a;margin-bottom:6px;">El problema que resolvemos</div>
-        <p style="font-size:13px;color:#555;line-height:1.7;margin:0;">El agricultor no solo necesita dinero — necesita acompañamiento técnico real. La banca tradicional financia sin entender el cultivo. Farmex evalúa al productor en campo, diseña el crédito adecuado a su ciclo y lo acompaña en cada etapa de su campaña, desde la siembra hasta la exportación.</p>
+        <p style="font-size:13px;color:#555;line-height:1.7;margin:0;">Solo el 3.8% de los productores agropecuarios del Perú recibe asistencia técnica. El pequeño y mediano productor gestiona su cultivo con información dispersa y carece de acompañamiento integral para mejorar su productividad, acceder a nuevos mercados y construir un historial confiable. Farmex AgroConsulting resuelve esto siendo su ecosistema de acompañamiento completo.</p>
+      </div>
+    </div>
+    <!-- Ecosistema Grupo IF -->
+    <div style="margin-top:20px;padding:16px 20px;background:#fff;border-radius:12px;border:1px solid #e5e9ef;">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#888;margin-bottom:12px;text-align:center;">Ecosistema Grupo IF — Empresas aliadas</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;">
+        <a href="https://www.farmexperu.pe" target="_blank" rel="noopener" style="text-decoration:none;display:flex;align-items:center;gap:8px;background:#E8F8EE;border:1px solid #c8e6c9;border-radius:8px;padding:8px 14px;"><span style="font-size:18px;">🌱</span><div><div style="font-size:12px;font-weight:700;color:#1a5c2e;">Farmex Perú</div><div style="font-size:10px;color:#666;">Insumos agrícolas</div></div></a>
+        <a href="https://www.quimtia.com.pe" target="_blank" rel="noopener" style="text-decoration:none;display:flex;align-items:center;gap:8px;background:#E8F4FD;border:1px solid #aed6f1;border-radius:8px;padding:8px 14px;"><span style="font-size:18px;">💧</span><div><div style="font-size:12px;font-weight:700;color:#1a4c7e;">Quimtia Perú</div><div style="font-size:10px;color:#666;">Riego tecnificado</div></div></a>
+        <a href="https://greendipity.co" target="_blank" rel="noopener" style="text-decoration:none;display:flex;align-items:center;gap:8px;background:#FEFCE8;border:1px solid #f9e79f;border-radius:8px;padding:8px 14px;"><span style="font-size:18px;">☀️</span><div><div style="font-size:12px;font-weight:700;color:#7d5a0f;">Greendipity</div><div style="font-size:10px;color:#666;">Energía solar agrícola</div></div></a>
+        <a href="https://www.banbif.com.pe" target="_blank" rel="noopener" style="text-decoration:none;display:flex;align-items:center;gap:8px;background:#F0F0FF;border:1px solid #c0c0f0;border-radius:8px;padding:8px 14px;"><span style="font-size:18px;">🏦</span><div><div style="font-size:12px;font-weight:700;color:#2c2c8e;">BanBif</div><div style="font-size:10px;color:#666;">Finanzas y crédito</div></div></a>
       </div>
     </div>
     <div style="text-align:center;margin-top:20px;padding:14px 20px;background:#E8F8EE;border-radius:10px;font-size:13px;color:#1a5c2e;">
@@ -95,8 +102,8 @@ export const html = `
   <section id="lp-servicios" class="lp-section lp-section-light">
     <div class="lp-section-header tc">
       <div class="lp-stag">Nuestros servicios</div>
-      <h2 class="lp-sh2">Una plataforma completa<br>para el <em>agroexportador</em></h2>
-      <p class="lp-sp">No es solo un crédito. Es la infraestructura financiera, técnica y comercial que el productor peruano necesitaba y nunca tuvo.</p>
+      <h2 class="lp-sh2">Una plataforma completa<br>para el <em>agricultor peruano</em></h2>
+      <p class="lp-sp">No es solo asesoría técnica. Es el ecosistema digital que acompaña al productor en cada etapa de su ciclo: datos del campo, score productivo, comercialización y acceso al financiamiento.</p>
     </div>
     <div class="lp-srv-grid">
       <div class="lp-srv-card">
@@ -111,8 +118,8 @@ export const html = `
       </div>
       <div class="lp-srv-card">
         <div class="lp-srv-ico">⭐</div>
-        <div class="lp-srv-name">Scoring Alternativo IA</div>
-        <div class="lp-srv-desc">Te evaluamos por tu tierra, tus campañas y tu historial productivo, no por Infocorp. Accede a financiamiento aunque el banco te haya dicho no.</div>
+        <div class="lp-srv-name">Score Productivo</div>
+        <div class="lp-srv-desc">Evaluamos tu capacidad productiva real: historial de campaña, rendimiento por hectárea, calidad de fruta y manejo agronómico. Un score que habla el idioma del agricultor.</div>
       </div>
       <div class="lp-srv-card">
         <div class="lp-srv-ico">👨‍🌾</div>
@@ -215,7 +222,7 @@ export const html = `
       <div>
         <div class="lp-footer-name">FARMEX AGROCONSULTING</div>
         <div class="lp-footer-sub">El Portal de Productores · Perú 2026</div>
-        <div class="lp-footer-desc">La infraestructura financiera para pequeños y medianos agroexportadores de la costa del Perú.</div>
+        <div class="lp-footer-desc">El ecosistema digital que acompaña al pequeño y mediano productor durante todo su ciclo productivo en la costa del Perú.</div>
       </div>
       <div class="lp-footer-links">
         <div class="lp-fl-title">Servicios</div>

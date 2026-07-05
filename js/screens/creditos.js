@@ -1,13 +1,14 @@
 const RATES = {
-  palta:    { fertilizacion:[4500,1.8], 'campaña':[12000,1.6], tecnificacion:[8000,1.5], postcosecha:[6500,1.9], fitosanitario:[3500,1.7], bioestimulacion:[2800,1.8] },
-  arandano: { fertilizacion:[5500,1.8], 'campaña':[15000,1.6], tecnificacion:[10000,1.5], postcosecha:[8000,1.9], fitosanitario:[4200,1.7], bioestimulacion:[3500,1.8] }
+  palta:    { fertilizacion:[4500,1.8], 'campaña':[12000,1.6], riegoTec:[8000,1.5], solar:[6000,1.4], postcosecha:[6500,1.9], fitosanitario:[3500,1.7], bioestimulacion:[2800,1.8] },
+  arandano: { fertilizacion:[5500,1.8], 'campaña':[15000,1.6], riegoTec:[10000,1.5], solar:[7500,1.4], postcosecha:[8000,1.9], fitosanitario:[4200,1.7], bioestimulacion:[3500,1.8] }
 };
 
 const CULT_LABELS = { palta: 'Palta Hass', arandano: 'Arándano' };
 const TIPO_LABELS = {
   fertilizacion:   'Crédito Fertilización',
   'campaña':       'Crédito Campaña',
-  tecnificacion:   'Crédito Tecnificación',
+  riegoTec:        'Crédito Riego Tecnificado',
+  solar:           'Crédito Energía Solar',
   postcosecha:     'Crédito Postcosecha',
   fitosanitario:   'Crédito Control Fitosanitario',
   bioestimulacion: 'Crédito Control de Bioestimulación',
@@ -26,10 +27,19 @@ export const html = `
     <div class="prod-p">8 meses · desde 1.8% mensual</div>
     <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">🌱 <a href="https://www.farmexperu.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">Farmex Perú – Fertilizantes e insumos agrícolas</a></div>
     <button onclick="var d=this.nextElementSibling;d.style.display=d.style.display==='block'?'none':'block';this.textContent=d.style.display==='block'?'▾ Ocultar catálogo':'▸ Ver catálogo'" style="width:100%;background:none;border:1px solid #c8e6c9;color:#27ae60;font-size:11px;font-weight:600;cursor:pointer;padding:5px 8px;border-radius:5px;margin-top:7px;text-align:left;">▸ Ver catálogo</button>
-    <div style="display:none;margin-top:6px;padding:9px 10px;background:#f0faf3;border-radius:6px;font-size:11px;color:#555;line-height:1.7;">
-      <div style="font-weight:700;color:#1e6e3a;margin-bottom:4px;">📦 Catálogo Farmex Perú</div>
-      <div><strong>Foliares:</strong> Kamab 26 · Pharmamin · MAXI frut · KYT-GREEN · FERTIKAM · FX-31 · AminoQuelant-CA · AMINOQUELANT-K LOW PH · AminoQuelant-Minors</div>
-      <div style="margin-top:3px;"><strong>Correctores & soporte:</strong> Powerfol Calcio · Powerfol Phos · Powerfol Potasio · FISIOSTRESS FISIOLÓGICO</div>
+    <div style="display:none;margin-top:6px;padding:9px 10px;background:#f0faf3;border-radius:6px;">
+      <div style="font-size:11px;font-weight:700;color:#1e6e3a;margin-bottom:8px;">📦 Farmex Perú · Fertilización — Selecciona e incluye en tu solicitud</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:6px;margin-bottom:8px;">
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌿</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Kamab 26</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Foliar · K</div><button onclick="window.fxCartAdd('Kamab 26','Fertilización',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌿</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Pharmamin</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Aminoácidos</div><button onclick="window.fxCartAdd('Pharmamin','Fertilización',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌿</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">MAXI frut</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Foliar · Ca-B</div><button onclick="window.fxCartAdd('MAXI frut','Fertilización',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌿</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">KYT-GREEN</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Foliar · N-Mg</div><button onclick="window.fxCartAdd('KYT-GREEN','Fertilización',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌿</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">FERTIKAM</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Fertirriego</div><button onclick="window.fxCartAdd('FERTIKAM','Fertilización',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌿</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">AminoQuelant-CA</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Corrector Ca</div><button onclick="window.fxCartAdd('AminoQuelant-CA','Fertilización',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌿</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Powerfol Calcio</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Corrector</div><button onclick="window.fxCartAdd('Powerfol Calcio','Fertilización',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌿</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Powerfol Potasio</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Corrector K</div><button onclick="window.fxCartAdd('Powerfol Potasio','Fertilización',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+      </div>
+      <a href="https://www.farmex.com.pe/catalogo/nutricion-avanzada/?clases=fertilizantes-foliares" target="_blank" rel="noopener" style="font-size:10px;color:#27ae60;font-weight:600;">🔗 Ver catálogo completo en farmex.com.pe →</a>
     </div>
   </div>
 
@@ -43,20 +53,39 @@ export const html = `
   </div>
 
   <div class="prod">
-    <div class="prod-stg">Etapa 3 · Todo el ciclo</div>
-    <div class="prod-n">Crédito Tecnificación</div>
-    <div class="prod-d">Sistemas de riego tecnificado, goteo por presión, infraestructura hídrica, tratamiento de agua y energía solar para bombeo. Optimiza el recurso hídrico en toda la campaña.</div>
+    <div class="prod-stg">Infraestructura hídrica · Todo el ciclo</div>
+    <div class="prod-n">Crédito Riego Tecnificado</div>
+    <div class="prod-d">Sistemas de goteo, aspersión y microaspersión, tratamiento de agua, clarificación y limpieza de riego. Optimiza el recurso hídrico con soluciones QUIMTIA.</div>
     <div class="prod-m">Hasta S/ 8,000 / ha</div>
     <div class="prod-p">18 meses · desde 1.5% mensual</div>
-    <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">💧 <a href="https://www.quimtia.com.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">QUIMTIA PERÚ – Soluciones de riego tecnificado</a></div>
+    <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">💧 <a href="https://www.quimtia.com.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">QUIMTIA PERÚ – Soluciones de agua para riego</a></div>
     <button onclick="var d=this.nextElementSibling;d.style.display=d.style.display==='block'?'none':'block';this.textContent=d.style.display==='block'?'▾ Ocultar catálogo':'▸ Ver catálogo'" style="width:100%;background:none;border:1px solid #c8e6c9;color:#27ae60;font-size:11px;font-weight:600;cursor:pointer;padding:5px 8px;border-radius:5px;margin-top:7px;text-align:left;">▸ Ver catálogo</button>
-    <div style="display:none;margin-top:6px;padding:9px 10px;background:#f0faf3;border-radius:6px;font-size:11px;color:#555;line-height:1.7;">
-      <div style="font-weight:700;color:#1e6e3a;margin-bottom:4px;">📦 Catálogo QUIMTIA – Red Agrícola</div>
-      <div><strong>Clarificación:</strong> Floculante XentriQ · Coagulante Chemlok · Carbón activado</div>
-      <div style="margin-top:3px;"><strong>Osmosis inversa:</strong> Anti-incrustante+Dispersante XentriQ · Filtros PP</div>
-      <div style="margin-top:3px;"><strong>Limpieza de riego:</strong> Delta 5% SC · Alfar 10 PM · Alfamatrix 10 EC · Carvadin 5% DP</div>
-      <div style="margin-top:3px;"><strong>Sanidad ambiental:</strong> Bactericida+Fungicida Chemlok 31420</div>
-      <div style="margin-top:3px;"><strong>Energía solar:</strong> Sistemas de bombeo solar Greendipity (paneles + motobomba)</div>
+    <div style="display:none;margin-top:6px;padding:9px 10px;background:#f0faf3;border-radius:6px;">
+      <div style="font-size:11px;font-weight:700;color:#1e6e3a;margin-bottom:8px;">📦 QUIMTIA – Riego Tecnificado</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:6px;margin-bottom:8px;">
+        <div style="background:#fff;border:1px solid #aed6f1;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F4FD;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">💧</div><div style="font-size:9px;font-weight:700;color:#1a4c7e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Floculante XentriQ</div><button onclick="window.fxCartAdd('Floculante XentriQ','Riego',this)" style="width:100%;background:#2980b9;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;margin-top:4px;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #aed6f1;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F4FD;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">💧</div><div style="font-size:9px;font-weight:700;color:#1a4c7e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Coagulante Chemlok</div><button onclick="window.fxCartAdd('Coagulante Chemlok','Riego',this)" style="width:100%;background:#2980b9;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;margin-top:4px;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #aed6f1;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F4FD;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">💧</div><div style="font-size:9px;font-weight:700;color:#1a4c7e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Anti-incrustante XentriQ</div><button onclick="window.fxCartAdd('Anti-incrustante XentriQ','Riego',this)" style="width:100%;background:#2980b9;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;margin-top:4px;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #aed6f1;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F4FD;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">💧</div><div style="font-size:9px;font-weight:700;color:#1a4c7e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Delta 5% SC</div><button onclick="window.fxCartAdd('Delta 5% SC','Riego',this)" style="width:100%;background:#2980b9;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;margin-top:4px;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #aed6f1;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F4FD;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">💧</div><div style="font-size:9px;font-weight:700;color:#1a4c7e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Alfar 10 PM</div><button onclick="window.fxCartAdd('Alfar 10 PM','Riego',this)" style="width:100%;background:#2980b9;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;margin-top:4px;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #aed6f1;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F4FD;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">💧</div><div style="font-size:9px;font-weight:700;color:#1a4c7e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Alfamatrix 10 EC</div><button onclick="window.fxCartAdd('Alfamatrix 10 EC','Riego',this)" style="width:100%;background:#2980b9;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;margin-top:4px;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #aed6f1;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F4FD;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">💧</div><div style="font-size:9px;font-weight:700;color:#1a4c7e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Carvadin 5% DP</div><button onclick="window.fxCartAdd('Carvadin 5% DP','Riego',this)" style="width:100%;background:#2980b9;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;margin-top:4px;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #aed6f1;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F4FD;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">💧</div><div style="font-size:9px;font-weight:700;color:#1a4c7e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Carbón activado</div><button onclick="window.fxCartAdd('Carbón activado','Riego',this)" style="width:100%;background:#2980b9;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;margin-top:4px;">+ Carrito</button></div>
+      </div>
+      <a href="https://www.quimtia.com.pe" target="_blank" rel="noopener" style="font-size:10px;color:#2980b9;font-weight:600;">🔗 Ver catálogo completo en quimtia.com.pe →</a>
+    </div>
+  </div>
+
+  <div class="prod">
+    <div class="prod-stg">Energía renovable · Inversión fija</div>
+    <div class="prod-n">Crédito Energía Solar</div>
+    <div class="prod-d">Financiamiento para sistemas fotovoltaicos de bombeo agrícola: paneles solares, inversores y motobombas de Greendipity. Reduce tu dependencia de la red eléctrica y baja costos operativos hasta 60%.</div>
+    <div class="prod-m">Hasta S/ 6,000 / ha</div>
+    <div class="prod-p">18 meses · desde 1.4% mensual</div>
+    <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">☀️ <a href="https://greendipity.co" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">Greendipity – Energía solar para el agro peruano</a></div>
+    <div style="margin-top:8px;padding:9px 10px;background:#FEFCE8;border-radius:6px;font-size:11px;color:#7d5a0f;line-height:1.6;">
+      ☀️ Greendipity realiza el <strong>análisis técnico y dimensionamiento solar gratuito</strong> para tu finca antes de aprobar el crédito.<br>
+      <a href="https://greendipity.co" target="_blank" rel="noopener" style="color:#a07010;font-weight:700;display:inline-block;margin-top:5px;">Solicitar análisis solar gratuito en greendipity.co →</a>
     </div>
   </div>
 
@@ -77,10 +106,19 @@ export const html = `
     <div class="prod-p">8 meses · desde 1.7% mensual</div>
     <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">🌱 <a href="https://www.farmexperu.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">Farmex Perú – Catálogo de protección</a></div>
     <button onclick="var d=this.nextElementSibling;d.style.display=d.style.display==='block'?'none':'block';this.textContent=d.style.display==='block'?'▾ Ocultar catálogo':'▸ Ver catálogo'" style="width:100%;background:none;border:1px solid #c8e6c9;color:#27ae60;font-size:11px;font-weight:600;cursor:pointer;padding:5px 8px;border-radius:5px;margin-top:7px;text-align:left;">▸ Ver catálogo</button>
-    <div style="display:none;margin-top:6px;padding:9px 10px;background:#f0faf3;border-radius:6px;font-size:11px;color:#555;line-height:1.7;">
-      <div style="font-weight:700;color:#1e6e3a;margin-bottom:4px;">📦 Catálogo Farmex Perú – Protección</div>
-      <div><strong>Fungicidas:</strong> Golden 40 EC · Botrimex · Novak 50 WP · Tribut · Aviate 75 WG · Azobin Top · Meteor · Orchestra · Orión 25 EW · Azobin · Benlate · Cougar · Cosavet DF · Roxicop · Totem</div>
-      <div style="margin-top:3px;"><strong>Otras categorías:</strong> Insecticidas · Herbicidas · Acaricidas · Nematicida</div>
+    <div style="display:none;margin-top:6px;padding:9px 10px;background:#f0faf3;border-radius:6px;">
+      <div style="font-size:11px;font-weight:700;color:#1e6e3a;margin-bottom:8px;">📦 Farmex Perú · Protección — Selecciona e incluye en tu solicitud</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:6px;margin-bottom:8px;">
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🛡️</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Golden 40 EC</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Fungicida</div><button onclick="window.fxCartAdd('Golden 40 EC','Fitosanitario',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🛡️</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Botrimex</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Fungicida</div><button onclick="window.fxCartAdd('Botrimex','Fitosanitario',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🛡️</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Novak 50 WP</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Fungicida</div><button onclick="window.fxCartAdd('Novak 50 WP','Fitosanitario',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🛡️</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Aviate 75 WG</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Fungicida</div><button onclick="window.fxCartAdd('Aviate 75 WG','Fitosanitario',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🛡️</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Azobin Top</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Fungicida</div><button onclick="window.fxCartAdd('Azobin Top','Fitosanitario',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🛡️</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Meteor</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Fungicida</div><button onclick="window.fxCartAdd('Meteor','Fitosanitario',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🛡️</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Cougar</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Insecticida</div><button onclick="window.fxCartAdd('Cougar','Fitosanitario',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🛡️</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Cosavet DF</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Acaricida</div><button onclick="window.fxCartAdd('Cosavet DF','Fitosanitario',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+      </div>
+      <a href="https://www.farmex.com.pe/catalogo/proteccion/" target="_blank" rel="noopener" style="font-size:10px;color:#27ae60;font-weight:600;">🔗 Ver catálogo completo en farmex.com.pe →</a>
     </div>
   </div>
 
@@ -92,15 +130,30 @@ export const html = `
     <div class="prod-p">6 meses · desde 1.8% mensual</div>
     <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #ddd;font-size:11px;color:#888;">🌱 <a href="https://www.farmexperu.pe" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none;font-weight:600;">Farmex Perú – Catálogo de especialidades</a></div>
     <button onclick="var d=this.nextElementSibling;d.style.display=d.style.display==='block'?'none':'block';this.textContent=d.style.display==='block'?'▾ Ocultar catálogo':'▸ Ver catálogo'" style="width:100%;background:none;border:1px solid #c8e6c9;color:#27ae60;font-size:11px;font-weight:600;cursor:pointer;padding:5px 8px;border-radius:5px;margin-top:7px;text-align:left;">▸ Ver catálogo</button>
-    <div style="display:none;margin-top:6px;padding:9px 10px;background:#f0faf3;border-radius:6px;font-size:11px;color:#555;line-height:1.7;">
-      <div style="font-weight:700;color:#1e6e3a;margin-bottom:4px;">📦 Catálogo Farmex Perú – Especialidades</div>
-      <div><strong>Bioestimulantes:</strong> MAXBIO ALGAE-L · Maxbio Algae · Powergizer · Terra-Sorb Foliar · Terra-Sorb Radicular</div>
-      <div style="margin-top:3px;"><strong>Reguladores de crecimiento:</strong> Ryamex 4% SL · Optimus</div>
-      <div style="margin-top:3px;"><strong>Inductores:</strong> Armurox · Phytness</div>
-      <div style="margin-top:3px;"><strong>Coadyuvantes & atrayentes:</strong> Sulphomex · Exilis · Powerfol Potasio · Powerfol Phos</div>
+    <div style="display:none;margin-top:6px;padding:9px 10px;background:#f0faf3;border-radius:6px;">
+      <div style="font-size:11px;font-weight:700;color:#1e6e3a;margin-bottom:8px;">📦 Farmex Perú · Especialidades — Selecciona e incluye en tu solicitud</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:6px;margin-bottom:8px;">
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌱</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">MAXBIO ALGAE-L</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Bioestimulante</div><button onclick="window.fxCartAdd('MAXBIO ALGAE-L','Bioestimulación',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌱</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Powergizer</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Bioestimulante</div><button onclick="window.fxCartAdd('Powergizer','Bioestimulación',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌱</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Terra-Sorb Foliar</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Bioestimulante</div><button onclick="window.fxCartAdd('Terra-Sorb Foliar','Bioestimulación',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌱</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Ryamex 4% SL</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Regulador</div><button onclick="window.fxCartAdd('Ryamex 4% SL','Bioestimulación',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌱</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Optimus</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Regulador</div><button onclick="window.fxCartAdd('Optimus','Bioestimulación',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌱</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Armurox</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Inductor</div><button onclick="window.fxCartAdd('Armurox','Bioestimulación',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌱</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Phytness</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Inductor</div><button onclick="window.fxCartAdd('Phytness','Bioestimulación',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:6px;padding:7px 5px;text-align:center;"><div style="height:36px;background:#E8F8EE;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:5px;">🌱</div><div style="font-size:9px;font-weight:700;color:#1a5c2e;min-height:22px;display:flex;align-items:center;justify-content:center;text-align:center;">Sulphomex</div><div style="font-size:8px;color:#888;margin-bottom:3px;">Coadyuvante</div><button onclick="window.fxCartAdd('Sulphomex','Bioestimulación',this)" style="width:100%;background:#27ae60;color:#fff;border:none;padding:3px 0;border-radius:3px;font-size:9px;font-weight:700;cursor:pointer;">+ Carrito</button></div>
+      </div>
+      <a href="https://www.farmex.com.pe/catalogo/especialidades/" target="_blank" rel="noopener" style="font-size:10px;color:#27ae60;font-weight:600;">🔗 Ver catálogo completo en farmex.com.pe →</a>
     </div>
   </div>
 
+</div>
+<div id="fx-cart-box" style="display:none;margin-bottom:16px;padding:14px 16px;background:var(--card);border:2px solid var(--ok);border-radius:10px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+    <div style="font-size:13px;font-weight:700;color:var(--txt);">🛒 Insumos seleccionados &nbsp;<span id="fx-cart-count" style="background:var(--ok);color:#fff;border-radius:20px;padding:2px 8px;font-size:11px;font-weight:800;">0</span></div>
+    <button onclick="document.getElementById('fx-cart-box').style.display='none'" style="background:none;border:none;color:var(--txt-m);cursor:pointer;font-size:12px;">✕ Cerrar</button>
+  </div>
+  <div id="fx-cart-items" style="margin-bottom:8px;max-height:160px;overflow-y:auto;"></div>
+  <div style="font-size:11px;color:var(--txt-m);">Los productos seleccionados se incluirán en tu solicitud de crédito al enviarla.</div>
 </div>
 <div class="stitle">🧮 Simulador de Crédito</div>
 <div style="font-size:12px;color:var(--txt-m);margin:-10px 0 14px;">Puedes simular el crédito de más de un cultivo a la vez y ver el total combinado.</div>
@@ -263,6 +316,43 @@ function mostrarResumen() {
 }
 
 export function init() {
+  const cart = { items: [] };
+
+  window.fxCartAdd = function(name, cat, btnEl) {
+    const ex = cart.items.find(i => i.name === name);
+    if (ex) ex.qty++;
+    else cart.items.push({ name, cat, qty: 1 });
+    if (btnEl) {
+      btnEl.textContent = '✓ En carrito';
+      btnEl.style.background = 'var(--ok)';
+    }
+    renderCart();
+  };
+
+  window.fxCartRemove = function(name) {
+    cart.items = cart.items.filter(i => i.name !== name);
+    renderCart();
+  };
+
+  function renderCart() {
+    const box = document.getElementById('fx-cart-box');
+    if (!box) return;
+    const count = cart.items.reduce((s, i) => s + i.qty, 0);
+    box.style.display = count > 0 ? 'block' : 'none';
+    const countEl = document.getElementById('fx-cart-count');
+    if (countEl) countEl.textContent = count;
+    const listEl = document.getElementById('fx-cart-items');
+    if (listEl) listEl.innerHTML = cart.items.map(i =>
+      `<div style="display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px dashed var(--border);">
+        <div style="font-size:11px;"><span style="color:var(--ok);">●</span> <strong>${i.name}</strong> <span style="font-size:10px;color:var(--txt-m);">(${i.cat})</span></div>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <span style="font-size:11px;font-weight:700;color:var(--txt);">×${i.qty}</span>
+          <button onclick="window.fxCartRemove('${i.name.replace(/'/g, "\\'")}');return false;" style="background:none;border:none;color:#e74c3c;cursor:pointer;font-size:11px;padding:2px 4px;">✕</button>
+        </div>
+      </div>`
+    ).join('');
+  }
+
   addSim('palta', 'campaña');
   document.getElementById('btn-add-sim').addEventListener('click', () => addSim('arandano', 'campaña'));
   document.getElementById('btn-enviar').addEventListener('click', mostrarResumen);

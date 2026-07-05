@@ -35,6 +35,12 @@ export const html = `
     <div class="sf-row"><div class="sf-ico">💳</div><div class="sf-info"><div class="sf-n">Historial comercial y de pagos</div><div class="sf-d">3 compradores activos · créditos al día</div></div><div class="sf-bar"><div class="sf-fill" style="width:75%;background:var(--gold)"></div></div><div class="sf-v">75</div></div>
   </div>
 </div>
+
+<div style="margin-top:14px;padding:14px 16px;background:linear-gradient(135deg,#F0F0FF,#E8E8FF);border:1px solid rgba(44,44,142,.2);border-radius:10px;">
+  <div style="font-size:10px;font-weight:700;color:#2c2c8e;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;">🏦 Certificado Técnico Productivo · BanBif</div>
+  <div style="font-size:12px;color:#444;line-height:1.6;margin-bottom:10px;">Con Score Muy Bueno (760), Farmex AgroConsulting puede emitir el <strong>Certificado Técnico Productivo</strong> que respalda tu perfil ante BanBif para acceder al portafolio completo de créditos agrícolas. Requiere plan Premium activo.</div>
+  <button onclick="alert('Certificado Técnico Productivo\n\nProductor: Raúl García Mendoza\nScore: 760/1000 · Muy Bueno\nEmitido por: Farmex AgroConsulting\n\nEste documento certifica la capacidad productiva del agricultor y es válido para presentación ante BanBif para productos de crédito agrícola.\n\nActiva el plan Premium para generar y descargar el informe completo.')" style="width:100%;background:#2c2c8e;color:#fff;border:none;padding:9px;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer;">📄 Generar Informe Técnico para BanBif →</button>
+</div>
 `;
 
 export function init() {}
